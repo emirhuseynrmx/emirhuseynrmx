@@ -1,4 +1,4 @@
-## Hi there 👋
+
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hi%20👋,%20I'm%20Emir%20Hüseyin&fontSize=50&fontAlign=50&fontColor=ffffff" width="100%"/>
