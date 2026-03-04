@@ -13,7 +13,6 @@
 
 ### 👨‍💻 About Me
 
-- 🔭 I’m currently working on **Project Titan (End-to-End Quant ML Engine)**
 - 🌱 I’m currently exploring **Stochastic Calculus, Advanced MLOps & Market Microstructure**
 - 👯 I’m looking to collaborate on **Open Source Quant Libraries & High-Frequency Trading Systems**
 - 💬 Ask me about **Python, Polars, Quantitative Finance & Machine Learning**
