@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>🚀 Quantitative Researcher | Data Scientist | Innovating at Finance & AI Intersection</h3>
-  <p>Building high-performance algorithmic trading systems & Next-Gen AI solutions.</p>
+ 
 </div>
 
 ---
