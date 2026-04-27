@@ -1,9 +1,11 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:0f3460,100:00d4ff&height=220&section=header&text=Emir%20Hüseyin%20İnci&fontSize=48&fontAlign=50&fontColor=ffffff&animation=fadeIn&desc=ML%20Engineer%20%7C%20Data%20Scientist%20%7C%20Causal%20AI&descAlign=50&descAlignY=75&descSize=18" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:0d1117,30:0a0a2e,60:0f3460,100:00d4ff&height=280&section=header&text=Emir%20Hüseyin%20İnci&fontSize=52&fontAlign=50&fontColor=ffffff&animation=fadeIn&desc=ML%20Engineer%20%7C%20Causal%20AI%20%7C%20Quant%20Research&descAlign=50&descAlignY=72&descSize=20&stroke=00d4ff&strokeWidth=2" width="100%"/>
 </div>
 
+<br/>
+
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Causal+Inference+%2B+MLOps+%2B+Prescriptive+Analytics;XGBoost+%7C+LightGBM+%7C+CatBoost+%7C+DoWhy;From+correlation+to+causation+%E2%86%92+from+prediction+to+decision;I+don%27t+predict+the+future%2C+I+calculate+probabilities." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=800&color=00D4FF&center=true&vCenter=true&width=750&height=60&lines=Causal+Inference+%2B+MLOps+%2B+Quant+Finance;XGBoost+%7C+DoWhy+%7C+Polars+%7C+Litestar;Correlation+explains.+Causation+decides.;Prediction+is+cheap.+Prescription+is+valuable.;Causality+is+rare.+I+build+it." alt="Typing SVG" />
 </div>
 
 <br/>
@@ -20,23 +22,30 @@
   </a>
 </div>
 
+<br/>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=emirhuseyininci&label=Profile+Views&color=00d4ff&style=for-the-badge" alt="profile views"/>
+</div>
+
 ---
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ## 🧠 About Me
 
 ```python
 class EmirHüseyin:
-    focus     = ["Causal Inference", "MLOps", "Prescriptive Analytics"]
-    stack     = ["XGBoost", "LightGBM", "SHAP", "DoWhy", "Polars", "Litestar"]
-    currently = "Building production-grade causal ML systems"
+    role      = "ML Engineer · Data Scientist · Quant Researcher"
+    focus     = ["Causal Inference", "MLOps", "Prescriptive Analytics", "Quant Finance"]
+    stack     = ["XGBoost", "LightGBM", "SHAP", "DoWhy", "Polars", "Litestar", "Celery"]
+    currently = "Building production-grade causal ML & quant trading systems"
+    exploring = ["Stochastic Calculus", "Market Microstructure", "Advanced MLOps"]
     belief    = "Correlation explains. Causation decides."
+    motto     = "Prediction is cheap. Prescription is valuable. Causality is rare."
 ```
 
-- 🔬 Building **prescriptive analytics engines** — not just prediction, but actionable decisions
-- 🧮 Deep interest in **causal inference**: DoWhy, T-Learner CATE, backdoor adjustment
-- ⚙️ Obsessed with **MLOps**: experiment tracking, drift monitoring, model calibration
-- 📐 Currently exploring **stochastic calculus** and market microstructure
-- 💡 Motto: *Prediction is cheap. Prescription is valuable. Causality is rare.*
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ---
 
@@ -44,24 +53,24 @@ class EmirHüseyin:
 
 <div align="center">
 
-[![NexusAlpha](https://github-readme-stats.vercel.app/api/pin/?username=emirhuseynrmx&repo=nexusalpha&theme=github_dark&border_color=00d4ff&title_color=00d4ff&icon_color=00d4ff)](https://github.com/emirhuseynrmx/nexusalpha)
+[![NexusAlpha](https://github-readme-stats.vercel.app/api/pin/?username=emirhuseynrmx&repo=nexusalpha&theme=github_dark&border_color=00d4ff&title_color=00d4ff&icon_color=00d4ff&bg_color=0d1117)](https://github.com/emirhuseynrmx/nexusalpha)
 
 </div>
 
-**NexusAlpha** — Quantitative Trading Engine · Honest signals from noisy markets.
-
-> *Most quant backtests are lying. NexusAlpha isn't.*
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=16&pause=2000&color=FFA500&center=true&vCenter=true&width=700&lines=Most+quant+backtests+are+lying.+NexusAlpha+isn%27t.;Honest+AUC+band%3A+0.58+%E2%80%93+0.62+%E2%80%94+leakage-free%2C+real+edge.;SHA-256+Secure+Boot+%7C+Native+TreeSHAP+%7C+Polars+ETL" />
+</div>
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| ETL | Polars (Rust-backed) | Stationary feature engineering — no raw prices |
+| ETL | Polars (Rust-backed) | Stationary features — no raw prices |
 | ML Core | XGBoost v2 + Optuna 50-trial HPO | TimeSeriesSplit `gap=5` — zero leakage |
 | Explainability | Native TreeSHAP (`pred_contribs`) | C++ level, no external XAI lib |
 | Security | SHA-256 Secure Boot | Hash verification before every execution |
 | Analytics | DuckDB OLAP + Plotly Tear Sheet | 4-panel interactive quant report |
-| API | FastAPI + Uvicorn | `/api/v1/predict/alpha` endpoint |
+| API | FastAPI + Uvicorn | `/api/v1/predict/alpha` |
 
-> **Honest AUC band: 0.58 – 0.62** — leakage-free, reproducible, real edge.
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ---
 
@@ -69,15 +78,20 @@ class EmirHüseyin:
 
 <div align="center">
 
-**Core ML**
+<img src="https://skillicons.dev/icons?i=python,pytorch,docker,redis,postgres,git,linux,nextjs&theme=dark&perline=8" />
+
+<br/><br/>
+
+**Core ML & AI**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-E74C3C?style=for-the-badge&logoColor=white)
 ![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=for-the-badge&logoColor=white)
+![CatBoost](https://img.shields.io/badge/CatBoost-F39C12?style=for-the-badge&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 
-**Data**
+**Data Engineering**
 
 ![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=polars&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -94,26 +108,25 @@ class EmirHüseyin:
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-**API & Frontend**
+**API & Web**
 
 ![Litestar](https://img.shields.io/badge/Litestar-FF7849?style=for-the-badge&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
 ![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 
 </div>
 
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
 ---
-
-## 🐍 Contribution Graph
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/emirhuseyininci/emirhuseyininci/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=Prediction%20is%20cheap.%20Prescription%20is%20valuable.%20Causality%20is%20rare.&author=Emir%20Hüseyin%20İnci" />
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:0f3460,100:0d1117&height=120&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:0f3460,100:0d1117&height=140&section=footer&text=Let's%20build%20something%20meaningful&fontSize=20&fontColor=ffffff&animation=fadeIn" width="100%"/>
 </div>
