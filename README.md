@@ -210,30 +210,6 @@ Synthetic    →  CTGAN privacy-safe A/B test data generation for studios withou
 
 ---
 
-### 🚧 [Aether](https://github.com/emirhuseynrmx/upliftspark) &nbsp;·&nbsp; Causal Uplift Engine for Game Studios &nbsp;`WIP`
-
-[![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://github.com/emirhuseynrmx/upliftspark)
-[![Delta Lake](https://img.shields.io/badge/Delta_Lake-00ADD8?style=for-the-badge)](https://github.com/emirhuseynrmx/upliftspark)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://github.com/emirhuseynrmx/upliftspark)
-[![LangChain](https://img.shields.io/badge/LangChain_RAG-1C3C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/upliftspark)
-[![Status](https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge)](https://github.com/emirhuseynrmx/upliftspark)
-
-> "Which promotion should be shown to which player, and is it worth it?" — answered causally, not correlationally.
-
-```
-ETL        →  Steam/game event logs → Delta Lake (Bronze → Silver → Gold)
-Causal ML  →  X-Learner CATE: heterogeneous treatment effects per player segment
-Simulator  →  "If we offer 30% discount to this segment, what is the net uplift?"
-RAG Chat   →  Natural language queries over analytics (LangChain + Ollama Llama 3)
-Data Gen   →  CTGAN synthetic A/B logs for privacy-preserving model training
-```
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=E25A1C&center=true&vCenter=true&width=760&lines=%E2%9C%93+X-Learner+CATE+%7C+Qini+curves+%7C+Promotion+What-if+Simulator;%E2%9C%93+Medallion+architecture+%7C+PySpark+MLlib+%7C+CTGAN+synthetic+data;%E2%9C%93+Target%3A+Turkish+mobile+game+studios+%7C+SaaS+%7C+Pre-seed+stage" />
-</div>
-
----
-
 <div align="center">
 
 ### Tech Stack
