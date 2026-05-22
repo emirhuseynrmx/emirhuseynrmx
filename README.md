@@ -4,23 +4,33 @@
 
 <div align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&multiline=false&repeat=true&width=800&height=55&lines=Building+production-grade+causal+ML+systems;Prescriptive+Analytics+%E2%80%94+from+signal+to+decision;Anti-leakage+quant+architecture+%7C+honest+alpha;Rust+%7C+XGBoost+%7C+DoWhy+%7C+Polars+%7C+Gemini+Agents" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&multiline=false&repeat=true&width=800&height=55&lines=Causal+Inference+%26+Prescriptive+Analytics;From+signal+to+decision+%E2%80%94+with+causality;XGBoost+%7C+DoWhy+%7C+Polars+%7C+Rust+%7C+Gemini+Agents" alt="Typing SVG" />
   </a>
 </div>
 
 <br/>
 
 <div align="center">
+
+ML Engineer focused on Causal Inference and Prescriptive Analytics.<br/>
+Currently building causal promotion optimization tools for Turkish gaming studios.<br/>
+Open to collaborations, research discussions, and new opportunities.
+
+</div>
+
+<br/>
+
+<div align="center">
   <a href="https://linkedin.com/in/emirhuseyininci">
-    <img height="28" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    <img height="32" src="https://img.shields.io/badge/Let's_connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
-  &nbsp;
-  <a href="https://kaggle.com/emirhseyinnci">
-    <img height="28" src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white"/>
-  </a>
-  &nbsp;
+  &nbsp;&nbsp;
   <a href="mailto:emirhuseyininci@gmail.com">
-    <img height="28" src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+    <img height="32" src="https://img.shields.io/badge/Drop_me_an_email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://kaggle.com/emirhseyinnci">
+    <img height="32" src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white"/>
   </a>
 </div>
 
@@ -46,8 +56,8 @@ location: Turkey
 focus:
   - Causal Inference & Uplift Modeling
   - Prescriptive Analytics Engines
-  - Anti-leakage Quant Systems
-  - Production MLOps Architecture
+  - Quant Research & Alpha Modeling
+  - MLOps & Experiment Design
   - Agentic AI & LLM Orchestration
 
 currently:
