@@ -120,14 +120,106 @@ principle:
 
 <br/>
 
+---
+
+### 🔬 [Aegis](https://github.com/emirhuseynrmx/aegis) &nbsp;·&nbsp; Prescriptive Analytics Engine for Telecom Churn
+
+[![Python](https://img.shields.io/badge/Python_3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/aegis)
+[![XGBoost](https://img.shields.io/badge/XGBoost_3.x-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![SHAP](https://img.shields.io/badge/SHAP-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![DoWhy](https://img.shields.io/badge/DoWhy-E67E22?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![DiCE](https://img.shields.io/badge/DiCE--ml-9B59B6?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![Tests](https://img.shields.io/badge/Tests-173%2F173_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![Coverage](https://img.shields.io/badge/Coverage-94%25-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![License](https://img.shields.io/badge/License-MIT-F39C12?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+
+> Most churn platforms stop at prediction. Aegis adds five layers on top — then validates them in backtesting.
+
+```
+Prediction   →  P(churn) · calibrated ensemble (XGB + LGBM + CatBoost · Optuna 30 trials)
+Explanation  →  Causal SHAP + DoWhy backdoor: direct vs indirect attribution
+Prescription →  DiCE counterfactuals + SCM constraints: "If contract → 2yr: P drops 83%→29%"
+Financial    →  WACC-NPV EV: "Costs $15, saves $412 NPV → INTERVENE"
+Causal       →  T-Learner CATE: "τ̂ = −0.18 → treatment genuinely reduces churn"
+Validation   →  Backtesting + PSI drift monitor: predictions hold in realized A/B data
+```
+
 <div align="center">
 
-[![NexusAlpha](https://github-readme-stats.vercel.app/api/pin/?username=emirhuseynrmx&repo=nexusalpha&theme=github_dark&border_color=58a6ff&title_color=58a6ff&icon_color=58a6ff&bg_color=0d1117&description_lines_count=2)](https://github.com/emirhuseynrmx/nexusalpha)
+| | Layer | Technology | What it does |
+|:-:|:------|:----------|:-------------|
+| 🧠 | ML Engine | XGBoost · LightGBM · CatBoost | Ensemble + isotonic calibration |
+| 🔬 | Explainability | Causal SHAP + DoWhy | Direct/indirect path attribution |
+| 🎯 | Prescription | DiCE-ml + SCM constraints | k=5 counterfactual scenarios |
+| 💰 | Financial | WACC-NPV · EV Calculator | Let-it-churn vs intervene decision |
+| 🧪 | Causal | T-Learner CATE | Sleeping Dog detection |
+| ⚙️ | Backend | Litestar 2.x · Celery · Redis | Async tasks · Feature Store · Circuit Breaker |
+| 📊 | Frontend | Next.js 15 · Zustand · TanStack Query | 14-tab dashboard |
 
 </div>
 
 <div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=9B59B6&center=true&vCenter=true&width=760&lines=%E2%9C%93+7-service+Docker+stack+%7C+173%2F173+tests+%7C+94%25+coverage+%7C+MIT;%E2%9C%93+Greedy+Knapsack+portfolio+%7C+PSI+drift+monitor+%7C+Monte+Carlo+N%3D100;%E2%9C%93+Feature+Store+(Redis+24h+TTL)+%7C+Explainer+microservice+%7C+Prometheus+metrics" />
+</div>
+
+---
+
+### 🔭 Aether &nbsp;·&nbsp; Causal Analytics & Promotion Optimizer for Game Studios &nbsp;`[in development]`
+
+![Status](https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge)
+![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
+![Delta Lake](https://img.shields.io/badge/Delta_Lake-00ADD8?style=for-the-badge)
+![X-Learner](https://img.shields.io/badge/X--Learner_CATE-9B59B6?style=for-the-badge)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain_RAG-1C3C3C?style=for-the-badge)
+
+> Answers the question game studios never had tooling for: *"Which players should receive this promotion — and does it actually cause retention?"*
+
+```
+ETL          →  Steam / event logs → Delta Lake medallion (Bronze → Silver → Gold)
+CATE Engine  →  X-Learner distributed on PySpark: heterogeneous treatment effects per segment
+Simulator    →  "If we give 30% discount to this cohort, what is the net uplift?" what-if API
+Segmentation →  Automatic player segmentation by treatment response (Persuadable / DNSD / ...)
+RAG Chat     →  "Which promo yields best uplift?" — LangChain + Ollama natural language interface
+Synthetic    →  CTGAN privacy-safe A/B test data generation for studios without historical data
+```
+
+---
+
+### 📈 [NexusAlpha](https://github.com/emirhuseynrmx/nexusalpha) &nbsp;·&nbsp; Anti-Leakage Quantitative Alpha Engine
+
+[![XGBoost](https://img.shields.io/badge/XGBoost_v2-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
+[![Optuna](https://img.shields.io/badge/Optuna_50--trial-6C63FF?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
+[![Polars](https://img.shields.io/badge/Polars_ETL-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/nexusalpha)
+[![TreeSHAP](https://img.shields.io/badge/Native_TreeSHAP-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
+[![SHA256](https://img.shields.io/badge/SHA--256_Secure_Boot-555?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
+
+<div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=3FB950&center=true&vCenter=true&width=700&lines=%E2%9C%93+SHA-256+Secure+Boot+%7C+Native+TreeSHAP+%7C+Polars+ETL+%7C+Optuna+HPO;%E2%9C%93+TimeSeriesSplit+gap%3D5+%E2%80%94+zero+look-ahead%2C+zero+illusions;%E2%9C%93+ROC+AUC+0.62%E2%80%930.68+%E2%80%94+leakage-free%2C+reproducible%2C+verifiable" />
+</div>
+
+---
+
+### 🚧 [Aether](https://github.com/emirhuseynrmx/upliftspark) &nbsp;·&nbsp; Causal Uplift Engine for Game Studios &nbsp;`WIP`
+
+[![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)](https://github.com/emirhuseynrmx/upliftspark)
+[![Delta Lake](https://img.shields.io/badge/Delta_Lake-00ADD8?style=for-the-badge)](https://github.com/emirhuseynrmx/upliftspark)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://github.com/emirhuseynrmx/upliftspark)
+[![LangChain](https://img.shields.io/badge/LangChain_RAG-1C3C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/upliftspark)
+[![Status](https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge)](https://github.com/emirhuseynrmx/upliftspark)
+
+> "Which promotion should be shown to which player, and is it worth it?" — answered causally, not correlationally.
+
+```
+ETL        →  Steam/game event logs → Delta Lake (Bronze → Silver → Gold)
+Causal ML  →  X-Learner CATE: heterogeneous treatment effects per player segment
+Simulator  →  "If we offer 30% discount to this segment, what is the net uplift?"
+RAG Chat   →  Natural language queries over analytics (LangChain + Ollama Llama 3)
+Data Gen   →  CTGAN synthetic A/B logs for privacy-preserving model training
+```
+
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=E25A1C&center=true&vCenter=true&width=760&lines=%E2%9C%93+X-Learner+CATE+%7C+Qini+curves+%7C+Promotion+What-if+Simulator;%E2%9C%93+Medallion+architecture+%7C+PySpark+MLlib+%7C+CTGAN+synthetic+data;%E2%9C%93+Target%3A+Turkish+mobile+game+studios+%7C+SaaS+%7C+Pre-seed+stage" />
 </div>
 
 ---
