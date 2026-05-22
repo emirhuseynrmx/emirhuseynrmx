@@ -82,37 +82,40 @@ principle:
 
 <div align="center">
 
-### 🚀 Featured Projects
+### Featured
 
 </div>
 
 <div align="center">
 
-[![AeraCFO](https://github-readme-stats.vercel.app/api/pin/?username=emirhuseynrmx&repo=aera&theme=github_dark&border_color=FFA500&title_color=FFA500&icon_color=FFA500&bg_color=0d1117&description_lines_count=2)](https://github.com/emirhuseynrmx/aera)
+### 🦀 [AeraCFO](https://github.com/emirhuseynrmx/aera) &nbsp;·&nbsp; Autonomous AI CFO Platform
+
+[![Rust](https://img.shields.io/badge/Rust_1.75+-000000?style=for-the-badge&logo=rust&logoColor=orange)](https://github.com/emirhuseynrmx/aera)
+[![Axum](https://img.shields.io/badge/Axum_0.7-blueviolet?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
+[![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/aera)
+[![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/emirhuseynrmx/aera)
+[![Tests](https://img.shields.io/badge/Tests-58%2F58_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
+[![License](https://img.shields.io/badge/License-BUSL_1.1-blue?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 
 </div>
 
-<div align="center">
-
-**Otonom Yapay Zekâ CFO Platformu — KOBİ'ler için**
-
-</div>
+> Upload CSV / XLSX → 3-agent pipeline (Planner → Executor → Critic) → Holt double-exponential forecast with 90% CI → corporate PDF tear sheet. No Python, no LangChain — pure Rust.
 
 <div align="center">
 
-| | Katman | Teknoloji | Ne Sağlar |
+| | Layer | Technology | Guarantee |
 |:-:|:------|:----------|:----------|
-| 🦀 | Backend | Rust 1.75+ · Axum 0.7 | Memory-safe, düşük gecikme, sıfır GC |
-| 🤖 | Ajan Motoru | Planner → Executor → Critic | 3 ajanlı, 6 tur Gemini function-calling |
-| 🧮 | Analitik | Polars + Holt α=0.3 β=0.1 | %90 CI projeksiyon, Z-score anomali |
-| 🏛️ | Mimari | Clean Architecture · DashMap | Lock-free session, LazyFrame pipeline |
-| 📊 | Çıktı | Typst PDF · REST API | Kurumsal A4 rapor + 10 Function-Tool |
-| 🔐 | Güvenlik | IP rate-limit · CSV injection guard | Sliding window, formula-injection filtresi |
+| 🦀 | Backend | Rust 1.75+ · Axum 0.7 | Memory-safe · zero GC · deterministic latency |
+| 🤖 | Agent Engine | Planner → Executor → Critic | 3-agent loop · up to 6 Gemini function-calling turns |
+| 🧮 | Analytics | Polars + Holt α=0.3 β=0.1 | 90% residual CI · Z-score anomaly (N-1 std) |
+| 🏛️ | Architecture | Clean Architecture · DashMap | Lock-free session store · LazyFrame pipeline |
+| 📊 | Output | Typst PDF · REST API | Corporate A4 report · 10 Function-Tools |
+| 🔐 | Security | IP rate-limit · CSV injection guard | Sliding window · formula-injection filter |
 
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=FFA500&center=true&vCenter=true&width=760&lines=%E2%9C%93+CSV+%2F+XLSX+y%C3%BCkle+%E2%86%92+3+ajan+%E2%86%92+Holt+projeksiyon+%2B+%2590+CI+%E2%86%92+PDF+rapor;%E2%9C%93+23+sekt%C3%B6r+demo+%7C+24+KOSGEB%2FT%C3%9CB%C4%B0TAK+te%C5%9Fvik+program%C4%B1+%7C+IDF-a%C4%9F%C4%B1rl%C4%B1kl%C4%B1+retrieval;%E2%9C%93+Rust+59.8%25+%7C+58%2F58+test+passing+%7C+zero+clippy+warning+%7C+BUSL+1.1" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=FFA500&center=true&vCenter=true&width=760&lines=%E2%9C%93+Rust+59.8%25+%7C+58%2F58+tests+passing+%7C+zero+clippy+warnings+%7C+BUSL+1.1;%E2%9C%93+23+sector+demos+%7C+IDF-weighted+incentive+retrieval+%7C+seed-deterministic+data+gen;%E2%9C%93+reqwest+pool+reuse+%7C+systemInstruction+%7C+DashMap+lock-free+shards" />
 </div>
 
 <br/>
