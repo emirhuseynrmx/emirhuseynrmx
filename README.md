@@ -37,6 +37,21 @@ I build machine learning systems that move from **prediction** to **intervention
 
 ---
 
+## Causal ML Engineer · Uplift Modeling · Quant Research
+
+I work on applied machine learning systems where the goal is not only to predict an outcome, but to decide what action should be taken next.
+
+My strongest focus areas are **causal inference**, **uplift modeling**, **heterogeneous treatment effect estimation**, **prescriptive analytics**, and **quantitative research infrastructure**. I am especially interested in problems where standard predictive modeling is not enough: campaign targeting, churn intervention, promotion optimization, counterfactual decisioning, leakage-free backtesting, and treatment-effect-aware product analytics.
+
+```text
+Core search profile:
+causal inference engineer · uplift modeling · CATE · treatment effect estimation
+prescriptive analytics · counterfactual explanations · quant research · Rust HFT
+LightGBM · XGBoost · DoWhy · EconML · DiCE · SHAP · Polars · Python ML systems
+```
+
+---
+
 ## Profile Snapshot
 
 ```yaml
@@ -82,6 +97,17 @@ stack:
 | Quant Research | Leakage control, reproducible backtests, alpha modeling, market microstructure |
 | ML Systems | Fast APIs, async workflows, feature stores, drift monitoring, testable pipelines |
 | Agentic Analytics | Planner-executor-critic loops, tool calling, structured reports, human-in-the-loop review |
+
+---
+
+## Repository Map
+
+| Repository | Domain | Searchable focus |
+|:--|:--|:--|
+| [AeraCFO](https://github.com/emirhuseynrmx/aera) | Agentic finance analytics | Rust analytics platform, Axum API, Polars ETL, Gemini agents, CFO reporting |
+| [Aegis](https://github.com/emirhuseynrmx/aegis) | Prescriptive churn analytics | churn prediction, causal SHAP, DoWhy, DiCE counterfactuals, CATE, retention economics |
+| [NexusAlpha](https://github.com/emirhuseynrmx/nexusalpha) | Quant research infrastructure | Rust HFT rework, market data infrastructure, leakage-free backtesting, alpha modeling |
+| Criteo Uplift Benchmark | Causal ML research | uplift modeling, AUUC, Qini curve, S-Learner, X-Learner, DR-Learner, Causal Forest |
 
 ---
 
@@ -245,12 +271,36 @@ NexusAlpha is scheduled for a major rework: a Rust-first, HFT-oriented research 
 
 ## Search Keywords
 
+This section is intentionally written for discoverability across GitHub search, profile search, repository indexing, and technical recruiters looking for causal ML or quant ML work.
+
+| Category | Keywords |
+|:--|:--|
+| Causal ML | causal inference, uplift modeling, heterogeneous treatment effects, CATE, treatment effect estimation, AUUC, Qini curve, Causal Forest |
+| Prescriptive Analytics | decision intelligence, counterfactual explanations, intervention policy, churn retention, promotion optimization, expected value modeling |
+| Tooling | DoWhy, EconML, DiCE, SHAP, LightGBM, XGBoost, CatBoost, scikit-learn, Polars, Pandas, NumPy |
+| Quant Research | quant research, alpha modeling, leakage-free backtesting, market microstructure, market data infrastructure, Rust HFT |
+| ML Engineering | Python ML systems, Rust analytics platform, FastAPI, Litestar, Axum, Redis, PostgreSQL, Docker, MLflow |
+| Agentic AI | Gemini agents, function calling, planner-executor-critic workflows, AI analytics reports, human-in-the-loop analytics |
+
 ```text
-causal inference · uplift modeling · heterogeneous treatment effects · CATE · AUUC · Qini curve
-prescriptive analytics · counterfactual explanations · DoWhy · EconML · DiCE · SHAP
-machine learning engineering · quant research · Rust HFT · market data infrastructure · alpha modeling · leakage-free backtesting
-Rust analytics platform · Python ML systems · Polars ETL · LightGBM · XGBoost · agentic AI
+causal inference engineer · uplift modeling benchmark · CATE estimation · treatment effects
+prescriptive analytics engine · counterfactual decisioning · DoWhy · EconML · DiCE · SHAP
+quant research platform · Rust HFT system · market data infrastructure · leakage-free backtesting
+Python machine learning systems · Rust analytics platform · Polars ETL · LightGBM · XGBoost
+agentic AI analytics · Gemini function calling · planner executor critic · production ML workflows
 ```
+
+---
+
+## Collaboration Fit
+
+I am most interested in work around:
+
+- Causal inference and uplift modeling for marketing, churn, gaming, fintech, and product analytics
+- Prescriptive analytics systems that connect ML outputs to concrete business decisions
+- Quant research infrastructure, especially Rust-first market data and HFT-oriented tooling
+- Production ML systems with strong validation, drift monitoring, reproducible experiments, and clean APIs
+- Agentic analytics workflows where LLMs call tools, inspect data, and produce structured reports
 
 <div align="center">
 
