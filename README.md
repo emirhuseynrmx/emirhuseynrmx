@@ -12,9 +12,9 @@
 
 <div align="center">
 
-ML Engineer focused on Causal Inference and Prescriptive Analytics.<br/>
-Currently building causal promotion optimization tools for Turkish gaming studios.<br/>
-Open to collaborations, research discussions, and new opportunities.
+ML Engineer working at the intersection of causal inference, prescriptive analytics, and production-grade ML systems.<br/>
+I build tools that move beyond prediction: models that explain, estimate treatment effects, and support decisions.<br/>
+Currently focused on causal promotion optimization, uplift modeling, quant research, and agentic analytics workflows.
 
 </div>
 
@@ -22,19 +22,17 @@ Open to collaborations, research discussions, and new opportunities.
 
 <div align="center">
   <a href="https://linkedin.com/in/emirhuseyininci">
-    <img height="32" src="https://img.shields.io/badge/Let's_connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    <img height="32" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
   &nbsp;&nbsp;
   <a href="mailto:emirhuseyininci@gmail.com">
-    <img height="32" src="https://img.shields.io/badge/Drop_me_an_email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+    <img height="32" src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
   &nbsp;&nbsp;
   <a href="https://kaggle.com/emirhseyinnci">
     <img height="32" src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white"/>
   </a>
 </div>
-
-<br/>
 
 ---
 
@@ -44,7 +42,7 @@ Open to collaborations, research discussions, and new opportunities.
 
 </div>
 
-<table align="center" border="0" width="90%">
+<table align="center" width="100%">
 <tr>
 <td width="50%" valign="top">
 
@@ -53,35 +51,29 @@ name: Emir Hüseyin İnci
 role: ML Engineer · Quant Researcher
 location: Turkey
 
-focus:
+core_focus:
   - Causal Inference & Uplift Modeling
-  - Prescriptive Analytics Engines
+  - Prescriptive Analytics
   - Quant Research & Alpha Modeling
-  - MLOps & Experiment Design
-  - Agentic AI & LLM Orchestration
-
-currently:
-  - Stochastic Calculus
-  - Market Microstructure
-  - Advanced Drift Monitoring
+  - ML Systems & Experiment Design
+  - Agentic AI Workflows
 ```
 
 </td>
 <td width="50%" valign="top">
 
 ```yaml
-philosophy:
-  prediction : "necessary but insufficient"
-  explanation: "SHAP + DoWhy backdoor"
-  prescription: "DiCE counterfactuals"
-  causality  : "T-Learner CATE"
-  finance    : "honest alpha only"
-  agents     : "Plan → Execute → Critique"
+current_learning:
+  - Stochastic Calculus
+  - Market Microstructure
+  - Drift Monitoring
+  - Treatment Effect Estimation
 
-principle:
-  "Correlation observes.
-   Causation acts.
-   Agents decide."
+working_principle:
+  prediction   : "estimate"
+  explanation  : "understand"
+  causality    : "intervene"
+  prescription : "decide"
 ```
 
 </td>
@@ -92,47 +84,38 @@ principle:
 
 <div align="center">
 
-### Featured
+### Selected Work
 
 </div>
 
-<div align="center">
-
-### 🦀 [AeraCFO](https://github.com/emirhuseynrmx/aera) &nbsp;·&nbsp; Autonomous AI CFO Platform
+## AeraCFO · Autonomous AI CFO Platform
 
 [![Rust](https://img.shields.io/badge/Rust_1.75+-000000?style=for-the-badge&logo=rust&logoColor=orange)](https://github.com/emirhuseynrmx/aera)
 [![Axum](https://img.shields.io/badge/Axum_0.7-blueviolet?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 [![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/aera)
 [![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/emirhuseynrmx/aera)
 [![Tests](https://img.shields.io/badge/Tests-58%2F58_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
-[![License](https://img.shields.io/badge/License-BUSL_1.1-blue?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
+[![License](https://img.shields.io/badge/License-MIT-F39C12?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 
-</div>
+Autonomous CFO workflow for SMEs: upload CSV/XLSX data, run a planner-executor-critic agent loop, forecast revenue, detect anomalies, and generate a corporate PDF report.
 
-> Upload CSV / XLSX → 3-agent pipeline (Planner → Executor → Critic) → Holt double-exponential forecast with 90% CI → corporate PDF tear sheet. No Python, no LangChain — pure Rust.
+The project is now MIT-licensed. A larger update is planned soon, with improvements around reporting quality, agent reliability, and production readiness.
 
-<div align="center">
-
-| | Layer | Technology | Guarantee |
-|:-:|:------|:----------|:----------|
-| 🦀 | Backend | Rust 1.75+ · Axum 0.7 | Memory-safe · zero GC · deterministic latency |
-| 🤖 | Agent Engine | Planner → Executor → Critic | 3-agent loop · up to 6 Gemini function-calling turns |
-| 🧮 | Analytics | Polars + Holt α=0.3 β=0.1 | 90% residual CI · Z-score anomaly (N-1 std) |
-| 🏛️ | Architecture | Clean Architecture · DashMap | Lock-free session store · LazyFrame pipeline |
-| 📊 | Output | Typst PDF · REST API | Corporate A4 report · 10 Function-Tools |
-| 🔐 | Security | IP rate-limit · CSV injection guard | Sliding window · formula-injection filter |
-
-</div>
+| Layer | Stack | What it proves |
+|:--|:--|:--|
+| Backend | Rust · Axum | Memory-safe API with deterministic latency |
+| Agent Engine | Gemini function calling | Structured planner-executor-critic loop |
+| Analytics | Polars · Holt forecasting | Fast tabular processing with confidence intervals |
+| Output | Typst · REST API | Reproducible A4 finance tear sheet |
+| Reliability | Tests · CSV-injection guard | Production-minded handling of messy business data |
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=FFA500&center=true&vCenter=true&width=760&lines=%E2%9C%93+Rust+59.8%25+%7C+58%2F58+tests+passing+%7C+zero+clippy+warnings+%7C+BUSL+1.1;%E2%9C%93+23+sector+demos+%7C+IDF-weighted+incentive+retrieval+%7C+seed-deterministic+data+gen;%E2%9C%93+reqwest+pool+reuse+%7C+systemInstruction+%7C+DashMap+lock-free+shards" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=FFA500&center=true&vCenter=true&width=760&lines=%E2%9C%93+Rust+59.8%25+%7C+58%2F58+tests+passing+%7C+zero+clippy+warnings+%7C+MIT;%E2%9C%93+23+sector+demos+%7C+IDF-weighted+incentive+retrieval+%7C+seed-deterministic+data+gen;%E2%9C%93+upcoming+reporting+%2B+agent+reliability+update+%7C+production-readiness+pass" />
 </div>
-
-<br/>
 
 ---
 
-### 🔬 [Aegis](https://github.com/emirhuseynrmx/aegis) &nbsp;·&nbsp; Prescriptive Analytics Engine for Telecom Churn
+## Aegis · Prescriptive Analytics Engine for Telecom Churn
 
 [![Python](https://img.shields.io/badge/Python_3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/aegis)
 [![XGBoost](https://img.shields.io/badge/XGBoost_3.x-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
@@ -143,30 +126,24 @@ principle:
 [![Coverage](https://img.shields.io/badge/Coverage-94%25-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
 [![License](https://img.shields.io/badge/License-MIT-F39C12?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
 
-> Most churn platforms stop at prediction. Aegis adds five layers on top — then validates them in backtesting.
+Most churn systems stop at prediction. Aegis adds explanation, counterfactual prescription, financial value, causal treatment-effect estimation, and backtesting.
 
+```text
+Prediction   -> calibrated churn ensemble
+Explanation  -> causal SHAP and DoWhy path attribution
+Prescription -> DiCE counterfactual scenarios with SCM constraints
+Financial    -> WACC-NPV expected value decisioning
+Causal       -> T-Learner CATE and sleeping-dog detection
+Validation   -> backtesting and PSI drift monitoring
 ```
-Prediction   →  P(churn) · calibrated ensemble (XGB + LGBM + CatBoost · Optuna 30 trials)
-Explanation  →  Causal SHAP + DoWhy backdoor: direct vs indirect attribution
-Prescription →  DiCE counterfactuals + SCM constraints: "If contract → 2yr: P drops 83%→29%"
-Financial    →  WACC-NPV EV: "Costs $15, saves $412 NPV → INTERVENE"
-Causal       →  T-Learner CATE: "τ̂ = −0.18 → treatment genuinely reduces churn"
-Validation   →  Backtesting + PSI drift monitor: predictions hold in realized A/B data
-```
 
-<div align="center">
-
-| | Layer | Technology | What it does |
-|:-:|:------|:----------|:-------------|
-| 🧠 | ML Engine | XGBoost · LightGBM · CatBoost | Ensemble + isotonic calibration |
-| 🔬 | Explainability | Causal SHAP + DoWhy | Direct/indirect path attribution |
-| 🎯 | Prescription | DiCE-ml + SCM constraints | k=5 counterfactual scenarios |
-| 💰 | Financial | WACC-NPV · EV Calculator | Let-it-churn vs intervene decision |
-| 🧪 | Causal | T-Learner CATE | Sleeping Dog detection |
-| ⚙️ | Backend | Litestar 2.x · Celery · Redis | Async tasks · Feature Store · Circuit Breaker |
-| 📊 | Frontend | Next.js 15 · Zustand · TanStack Query | 14-tab dashboard |
-
-</div>
+| Layer | Stack | Outcome |
+|:--|:--|:--|
+| ML Engine | XGBoost · LightGBM · CatBoost | Calibrated churn probabilities |
+| Explainability | SHAP · DoWhy | Direct and indirect driver analysis |
+| Prescription | DiCE-ml · SCM constraints | Actionable retention scenarios |
+| Financial | WACC-NPV · EV calculator | Intervention vs no-intervention decision |
+| Platform | Litestar · Celery · Redis · Next.js | Async analytics workflow and dashboard |
 
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=9B59B6&center=true&vCenter=true&width=760&lines=%E2%9C%93+7-service+Docker+stack+%7C+173%2F173+tests+%7C+94%25+coverage+%7C+MIT;%E2%9C%93+Greedy+Knapsack+portfolio+%7C+PSI+drift+monitor+%7C+Monte+Carlo+N%3D100;%E2%9C%93+Feature+Store+(Redis+24h+TTL)+%7C+Explainer+microservice+%7C+Prometheus+metrics" />
@@ -174,7 +151,29 @@ Validation   →  Backtesting + PSI drift monitor: predictions hold in realized 
 
 ---
 
-### 🔭 Aether &nbsp;·&nbsp; Causal Analytics & Promotion Optimizer for Game Studios &nbsp;`[in development]`
+## Recent Research · Criteo Uplift Modeling Benchmark
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
+[![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=for-the-badge)](#)
+[![Causal ML](https://img.shields.io/badge/Causal_ML-Uplift_Modeling-9B59B6?style=for-the-badge)](#)
+[![AUUC](https://img.shields.io/badge/Metric-AUUC-00BFA5?style=for-the-badge)](#)
+
+Benchmark on 7M Criteo rows comparing S-Learner, T-Learner, X-Learner, DR-Learner, Causal Forest, and a response-model policy baseline.
+
+| Result | Value |
+|:--|--:|
+| Validation winner | S-Learner |
+| Test AUUC | 3405.48 |
+| Top-decile uplift | 0.06538 |
+| Top-decile relative uplift | 6.23x |
+| Top 10% policy gain | ~6,865 incremental visits |
+| Causal Forest cost | 3335s · 14.5 GB peak RSS |
+
+The main takeaway was practical rather than flashy: S-Learner gave the best production trade-off in this run, while Causal Forest was useful as a research diagnostic but expensive at this scale.
+
+---
+
+## Aether · Causal Analytics & Promotion Optimizer for Game Studios `[in development]`
 
 ![Status](https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge)
 ![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
@@ -183,26 +182,28 @@ Validation   →  Backtesting + PSI drift monitor: predictions hold in realized 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain_RAG-1C3C3C?style=for-the-badge)
 
-> Answers the question game studios never had tooling for: *"Which players should receive this promotion — and does it actually cause retention?"*
+Promotion optimization system for game studios: event-log ETL, CATE estimation, what-if simulation, treatment-response segmentation, and natural-language analytics over experiment results.
 
-```
-ETL          →  Steam / event logs → Delta Lake medallion (Bronze → Silver → Gold)
-CATE Engine  →  X-Learner distributed on PySpark: heterogeneous treatment effects per segment
-Simulator    →  "If we give 30% discount to this cohort, what is the net uplift?" what-if API
-Segmentation →  Automatic player segmentation by treatment response (Persuadable / DNSD / ...)
-RAG Chat     →  "Which promo yields best uplift?" — LangChain + Ollama natural language interface
-Synthetic    →  CTGAN privacy-safe A/B test data generation for studios without historical data
+```text
+ETL          -> Steam / event logs -> Delta Lake medallion pipeline
+CATE Engine  -> X-Learner treatment-effect estimation
+Simulator    -> promotion uplift and net-value what-if API
+Segmentation -> player groups by estimated treatment response
+RAG Chat     -> natural-language analytics over promotion experiments
+Synthetic    -> privacy-safe A/B test data generation
 ```
 
 ---
 
-### 📈 [NexusAlpha](https://github.com/emirhuseynrmx/nexusalpha) &nbsp;·&nbsp; Anti-Leakage Quantitative Alpha Engine
+## NexusAlpha · Anti-Leakage Quantitative Alpha Engine
 
 [![XGBoost](https://img.shields.io/badge/XGBoost_v2-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
 [![Optuna](https://img.shields.io/badge/Optuna_50--trial-6C63FF?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
 [![Polars](https://img.shields.io/badge/Polars_ETL-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/nexusalpha)
 [![TreeSHAP](https://img.shields.io/badge/Native_TreeSHAP-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
 [![SHA256](https://img.shields.io/badge/SHA--256_Secure_Boot-555?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
+
+Quant research engine focused on reproducibility, leakage control, feature integrity, and explainable alpha modeling.
 
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=400&size=13&pause=3000&color=3FB950&center=true&vCenter=true&width=700&lines=%E2%9C%93+SHA-256+Secure+Boot+%7C+Native+TreeSHAP+%7C+Polars+ETL+%7C+Optuna+HPO;%E2%9C%93+TimeSeriesSplit+gap%3D5+%E2%80%94+zero+look-ahead%2C+zero+illusions;%E2%9C%93+ROC+AUC+0.62%E2%80%930.68+%E2%80%94+leakage-free%2C+reproducible%2C+verifiable" />
@@ -212,7 +213,7 @@ Synthetic    →  CTGAN privacy-safe A/B test data generation for studios withou
 
 <div align="center">
 
-### Tech Stack
+### Technical Stack
 
 <br/>
 
@@ -253,6 +254,12 @@ Synthetic    →  CTGAN privacy-safe A/B test data generation for studios withou
 </div>
 
 ---
+
+<div align="center">
+
+Open to applied ML, causal inference, quant research, and analytics-engineering collaborations.
+
+</div>
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12,20,24&height=120&section=footer&animation=twinkling" width="100%"/>
