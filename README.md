@@ -76,7 +76,7 @@ The main takeaway was practical: S-Learner gave the best production trade-off in
 [![Axum](https://img.shields.io/badge/Axum_0.7-blueviolet?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 [![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/aera)
 [![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/emirhuseynrmx/aera)
-[![Tests](https://img.shields.io/badge/Tests-58%2F58_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
+[![Tests](https://img.shields.io/badge/Tests-63%2F63_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 [![License](https://img.shields.io/badge/License-MIT-F39C12?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 
 Autonomous finance workflow for SMEs: upload CSV/XLSX data, run a planner-executor-critic agent loop, forecast business metrics, detect anomalies, and generate a corporate PDF report.
