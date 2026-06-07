@@ -31,7 +31,7 @@
 
 I build machine learning systems that move from **prediction** to **intervention**: uplift modeling, treatment-effect estimation, prescriptive analytics, and quant research infrastructure.
 
-Currently refining **AeraCFO** for production reporting and packaging the **Criteo uplift benchmark** as a public research repository.
+Currently refining **AeraCFO** toward production-style reporting and packaging the **Criteo uplift benchmark** as a public research repository.
 
 ---
 
@@ -41,7 +41,7 @@ Currently refining **AeraCFO** for production reporting and packaging the **Crit
 |:--|:--|
 | Causal ML | Uplift modeling, CATE estimation, AUUC/Qini evaluation, treatment-aware targeting |
 | Prescriptive Analytics | Turning model outputs into actions, policies, expected value, and retention decisions |
-| Quant Research | Leakage control, reproducible backtests, alpha modeling, market-data infrastructure |
+| Quant Research | Leakage control, reproducible backtests, risk/return modeling, market-data infrastructure |
 | ML Systems | Fast APIs, typed configs, testable pipelines, drift monitoring, production workflows |
 
 ---
@@ -50,11 +50,7 @@ Currently refining **AeraCFO** for production reporting and packaging the **Crit
 
 ### [Criteo Uplift Modeling Benchmark](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
-[![Pydantic](https://img.shields.io/badge/Pydantic_v2-E92063?style=for-the-badge&logo=pydantic&logoColor=white)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
-[![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=for-the-badge)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
-[![EconML](https://img.shields.io/badge/EconML-Causal_Forest-8957E5?style=for-the-badge)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
-[![Metric](https://img.shields.io/badge/Metric-AUUC_/_Qini-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) [![Pydantic](https://img.shields.io/badge/Pydantic_v2-E92063?style=for-the-badge&logo=pydantic&logoColor=white)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) [![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=for-the-badge)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) [![EconML](https://img.shields.io/badge/EconML-Causal_Forest-8957E5?style=for-the-badge)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) [![Metric](https://img.shields.io/badge/Metric-AUUC_/_Qini-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
 
 Modular Python benchmark on 7M Criteo rows comparing S-Learner, T-Learner, X-Learner, DR-Learner, Causal Forest, and a response-model targeting baseline.
 
@@ -66,59 +62,42 @@ Modular Python benchmark on 7M Criteo rows comparing S-Learner, T-Learner, X-Lea
 | Top 10% policy gain | ~6,865 incremental visits |
 | Causal Forest cost | 3335s, 14.5 GB peak RSS |
 
-The main takeaway was practical: S-Learner gave the best production trade-off in this run, while Causal Forest was useful but expensive at this scale.
+Main takeaway: in this run, S-Learner gave the strongest overall AUUC signal, while the simple response-model baseline remained surprisingly competitive against several more complex uplift methods.
 
 ---
 
-### [AeraCFO](https://github.com/emirhuseynrmx/aera) - Autonomous AI CFO Platform
+### [AeraCFO](https://github.com/emirhuseynrmx/aera) - AI-Assisted Finance Reporting Platform
 
-[![Rust](https://img.shields.io/badge/Rust_1.75+-000000?style=for-the-badge&logo=rust&logoColor=orange)](https://github.com/emirhuseynrmx/aera)
-[![Axum](https://img.shields.io/badge/Axum_0.7-blueviolet?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
-[![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/aera)
-[![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/emirhuseynrmx/aera)
-[![Tests](https://img.shields.io/badge/Tests-63%2F63_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
-[![License](https://img.shields.io/badge/License-MIT-F39C12?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
+[![Rust](https://img.shields.io/badge/Rust_1.75+-000000?style=for-the-badge&logo=rust&logoColor=orange)](https://github.com/emirhuseynrmx/aera) [![Axum](https://img.shields.io/badge/Axum_0.7-blueviolet?style=for-the-badge)](https://github.com/emirhuseynrmx/aera) [![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/aera) [![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/emirhuseynrmx/aera) [![Tests](https://img.shields.io/badge/Tests-63%2F63_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aera) [![License](https://img.shields.io/badge/License-MIT-F39C12?style=for-the-badge)](https://github.com/emirhuseynrmx/aera)
 
-Autonomous finance workflow for SMEs: upload CSV/XLSX data, run a planner-executor-critic agent loop, forecast business metrics, detect anomalies, and generate a corporate PDF report.
+Finance analytics workflow for SMEs: upload CSV/XLSX data, run a planner-executor-critic agent loop, forecast business metrics, detect anomalies, and generate a structured PDF report.
 
-The project is now MIT-licensed. A larger update is planned around reporting quality, agent reliability, and production readiness.
+The project is now MIT-licensed. A larger update is planned around reporting quality, agent reliability, and cleaner production packaging.
 
 ---
 
 ### [Aegis](https://github.com/emirhuseynrmx/aegis) - Prescriptive Analytics Engine for Telecom Churn
 
-[![Python](https://img.shields.io/badge/Python_3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/aegis)
-[![XGBoost](https://img.shields.io/badge/XGBoost_3.x-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
-[![SHAP](https://img.shields.io/badge/SHAP-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
-[![DoWhy](https://img.shields.io/badge/DoWhy-E67E22?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
-[![DiCE](https://img.shields.io/badge/DiCE--ml-9B59B6?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
-[![Tests](https://img.shields.io/badge/Tests-173%2F173_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
-[![Coverage](https://img.shields.io/badge/Coverage-94%25-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
+[![Python](https://img.shields.io/badge/Python_3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/aegis) [![XGBoost](https://img.shields.io/badge/XGBoost_3.x-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis) [![SHAP](https://img.shields.io/badge/SHAP-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis) [![DoWhy](https://img.shields.io/badge/DoWhy-E67E22?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis) [![DiCE](https://img.shields.io/badge/DiCE--ml-9B59B6?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis) [![Tests](https://img.shields.io/badge/Tests-173%2F173_passing-success?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis) [![Coverage](https://img.shields.io/badge/Coverage-94%25-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/aegis)
 
 Most churn systems stop at prediction. Aegis adds explanation, counterfactual prescription, financial value, causal treatment-effect estimation, and backtesting.
 
 ```text
 Prediction -> calibrated churn ensemble
-Explanation -> causal SHAP and DoWhy path attribution
-Prescription -> DiCE counterfactual scenarios with SCM constraints
-Financial -> WACC-NPV expected value decisioning
+Explanation -> SHAP-based model interpretation and DoWhy-style causal analysis
+Prescription -> DiCE counterfactual scenarios with business-rule constraints
+Financial -> expected value decisioning with NPV-style logic
 Causal -> T-Learner CATE and sleeping-dog detection
 Validation -> backtesting and PSI drift monitoring
 ```
 
 ---
 
-### [NexusAlpha](https://github.com/emirhuseynrmx/nexusalpha) - Anti-Leakage Quantitative Alpha Engine
+### NexusAlpha - Private Rust Rewrite in Progress
 
-[![XGBoost](https://img.shields.io/badge/XGBoost_v2-E74C3C?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
-[![Optuna](https://img.shields.io/badge/Optuna_50--trial-6C63FF?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
-[![Polars](https://img.shields.io/badge/Polars_ETL-CD792C?style=for-the-badge&logo=polars&logoColor=white)](https://github.com/emirhuseynrmx/nexusalpha)
-[![TreeSHAP](https://img.shields.io/badge/Native_TreeSHAP-00BFA5?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
-[![SHA256](https://img.shields.io/badge/SHA--256_Secure_Boot-555?style=for-the-badge)](https://github.com/emirhuseynrmx/nexusalpha)
+Currently being redesigned as a Rust-first low-latency quant research infrastructure project.
 
-Quant research engine focused on reproducibility, leakage control, feature integrity, and explainable alpha modeling.
-
-Roadmap note: NexusAlpha is planned for a Rust-first, HFT-oriented rework with faster market-data handling, cleaner backtesting primitives, and stricter alpha evaluation.
+The rewrite focuses on cleaner market-data handling, stricter evaluation primitives, reproducible experiments, and more realistic research workflows.
 
 ---
 
@@ -130,17 +109,7 @@ Roadmap note: NexusAlpha is planned for a Rust-first, HFT-oriented rework with f
 
 <br/><br/>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
-![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=flat-square)
-![XGBoost](https://img.shields.io/badge/XGBoost-E74C3C?style=flat-square)
-![DoWhy](https://img.shields.io/badge/DoWhy-Causal_Inference-E67E22?style=flat-square)
-![EconML](https://img.shields.io/badge/EconML-Treatment_Effects-8957E5?style=flat-square)
-![SHAP](https://img.shields.io/badge/SHAP-Explainability-00BFA5?style=flat-square)
-![DiCE](https://img.shields.io/badge/DiCE-Counterfactuals-BF8BFF?style=flat-square)
-![Polars](https://img.shields.io/badge/Polars-CD792C?style=flat-square&logo=polars&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white) ![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=flat-square) ![XGBoost](https://img.shields.io/badge/XGBoost-E74C3C?style=flat-square) ![DoWhy](https://img.shields.io/badge/DoWhy-Causal_Inference-E67E22?style=flat-square) ![EconML](https://img.shields.io/badge/EconML-Treatment_Effects-8957E5?style=flat-square) ![SHAP](https://img.shields.io/badge/SHAP-Explainability-00BFA5?style=flat-square) ![DiCE](https://img.shields.io/badge/DiCE-Counterfactuals-BF8BFF?style=flat-square) ![Polars](https://img.shields.io/badge/Polars-CD792C?style=flat-square&logo=polars&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 </div>
 
