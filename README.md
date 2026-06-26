@@ -47,14 +47,18 @@ Currently building **[GOVERIS](https://emirhuseyin.tech/goveris/)** — AI cost 
 ### [calybris-core](https://github.com/emirhuseynrmx/calybris-core) — Open-Source Decision Engine
 
 [![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)](https://github.com/emirhuseynrmx/calybris-core)
+[![Crates.io](https://img.shields.io/crates/v/calybris-core?style=flat-square)](https://crates.io/crates/calybris-core)
+[![docs.rs](https://img.shields.io/docsrs/calybris-core?style=flat-square)](https://docs.rs/calybris-core)
 [![CI](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/emirhuseynrmx/calybris-core/graph/badge.svg?style=flat-square)](https://codecov.io/gh/emirhuseynrmx/calybris-core)
 [![License](https://img.shields.io/badge/Apache--2.0-blue?style=flat-square)](https://github.com/emirhuseynrmx/calybris-core/blob/main/LICENSE)
 
-Allocation-free prescriptive decision kernel. No floating-point in the hot path, zero `unsafe`, HMAC-SHA256 hash-chained WAL.
+Deterministic proof-carrying decision core: integer kernel, replay verification, fixed-point budget proofs, HMAC-SHA256 hash-chained WAL. No `f64` in the hot path, `#![forbid(unsafe_code)]`.
 
 ```
-cargo test        # 35 tests pass
-cargo bench       # 8.6M decisions/sec
+cargo add calybris-core
+cargo test --all-features   # 99 unit + integration
+cargo bench                 # 8.6M decisions/sec (kernel)
 ```
 
 </td>
@@ -64,18 +68,20 @@ cargo bench       # 8.6M decisions/sec
 |:--|--:|
 | Kernel throughput | **8.6M/sec** |
 | Constraint gates | 11 |
-| Tests | 35 + proptest |
+| Tests | 99 + proptest + Loom + Miri |
 | `unsafe` blocks | 0 |
 | WAL integrity | HMAC-SHA256 |
-| Budget engine | CAS atomic |
+| Budget engine | CAS + conservation proof |
 
 </td>
 </tr>
 </table>
 
-**Modules:** Integer decision kernel with utility-maximizing selection and counterfactual tracking. Atomic CAS budget engine with conservation invariant. Generic HMAC-SHA256 hash-chained WAL with tamper evidence.
+**Modules:** `kernel` (utility-maximizing prescribe + counterfactuals) · `verify` (canonical digests + replay) · `finance` (ledger digest + `FinancialCertificate`) · `budget` (per-tenant CAS + I6 invariant) · `wal` (tamper-evident audited chain).
 
-The full engine (adaptive Thompson Sampling routing, policy evolution, GBM prompt model) powers [GOVERIS](https://emirhuseyin.tech/goveris/) and is proprietary.
+Reference paths: **LLM routing** and **pre-trade guard** — not an exchange or strategy engine.
+
+The full engine (adaptive Thompson Sampling routing, policy evolution, GBM prompt model, HTTP gateway) powers [GOVERIS](https://emirhuseyin.tech/goveris/) and is proprietary.
 
 ---
 
