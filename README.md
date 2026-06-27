@@ -1,121 +1,58 @@
 # Emir Huseyin Inci
 
-Python automation, data pipelines, and AI/ML reporting tools for business workflows.
+Python Automation & AI/ML Engineer
 
-I build practical software for clients who need clean outputs instead of vague prototypes: CSV/Excel automation, web scraping pipelines, document chatbots, churn reports, trading performance reports, Telegram bots, and FastAPI services.
+I build data pipelines, automation tools, ML reporting systems, and backend services with a focus on clean delivery: typed configs, validation, tests, CI, sample outputs, and readable documentation.
 
-Most of my projects are structured as reusable delivery templates: validated inputs, typed configs, tests, CI, sample data, sample outputs, and clear handoff docs.
+Open to roles and projects around Python backend development, data engineering, automation, ML tooling, and AI-assisted business workflows.
 
 [Portfolio](https://emirhuseyin.tech) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [Email](mailto:emirhuseyininci@gmail.com)
 
 ---
 
-## What I Build
+## Core Skills
 
-### Data Automation
-
-- Web scraping and public data extraction
-- CSV / Excel cleaning and normalization
-- Price monitoring and alert reports
-- API to CSV / Google Sheets style workflows
-- Data quality checks and export-ready files
-
-### AI / ML Reports
-
-- Churn prediction and retention reports
-- RAG chatbots for PDFs, documents, and internal knowledge bases
-- ML model training starters with metrics and prediction exports
-- SHAP / feature importance reports where explainability matters
-
-### Business Automation
-
-- Telegram bots for lead capture, FAQs, alerts, and customer workflows
-- n8n workflow templates
-- FastAPI backends for automation and ML workflows
-- Simple tools that remove repetitive manual work
-
-### Trading / Quant Reporting
-
-- Trade log and backtest performance reports
-- Equity curve, drawdown, monthly returns, and symbol breakdowns
-- Clean PDF reports from CSV exports
-- No profit guarantees, no signal-selling, no account access
+| Area | Keywords |
+| --- | --- |
+| Python | pandas, Pydantic v2, Pandera, Typer, Rich, pytest |
+| Backend | FastAPI, REST APIs, Docker, GitHub Actions |
+| Data | CSV, Excel, JSONL, Parquet, ETL, data validation |
+| Machine Learning | scikit-learn, XGBoost, SHAP, LightGBM, model reports |
+| AI Tools | RAG, document retrieval, source-aware chatbots |
+| Automation | web scraping, Telegram bots, workflow automation |
+| Systems | Rust, Axum, Polars, PostgreSQL |
 
 ---
 
-## Selected Work
-
-### [scraping-data-pipeline](https://github.com/emirhuseynrmx/scraping-data-pipeline)
-
-Production-style Python scraping pipeline with selector configs, Pydantic models, Pandera validation, retries, CSV / JSONL / XLSX / Parquet exports, tests, and CI.
-
-### [csv-excel-cleaning-toolkit](https://github.com/emirhuseynrmx/csv-excel-cleaning-toolkit)
-
-CSV and Excel cleaning toolkit for messy business files: email normalization, validation, deduplication, type inference, outlier flags, and clean export reports.
+## Selected Projects
 
 ### [churn-prediction-retention-report](https://github.com/emirhuseynrmx/churn-prediction-retention-report)
-
-Client-ready churn reporting pipeline: customer risk scores, retention recommendations, XGBoost, SHAP, lift analysis, leakage checks, PDF report, and sample outputs.
+Customer churn reporting pipeline with XGBoost, SHAP explainability, lift analysis, leakage checks, PDF reports, validated CSV outputs, and CI.
 
 ### [trading-performance-report-kit](https://github.com/emirhuseynrmx/trading-performance-report-kit)
+Trade log reporting tool that turns CSV/backtest exports into performance metrics, equity curves, drawdown analysis, monthly returns, and PDF reports.
 
-Trade CSV / backtest export reporting kit: performance metrics, equity curve, drawdown, monthly returns, symbol breakdown, PDF report, tests, and CI.
+### [scraping-data-pipeline](https://github.com/emirhuseynrmx/scraping-data-pipeline)
+Production-style scraping and data extraction pipeline with selector configs, validation, retries, typed records, and CSV/JSONL/XLSX/Parquet exports.
 
 ### [rag-chatbot-template](https://github.com/emirhuseynrmx/rag-chatbot-template)
-
-Local RAG chatbot template for documents with ingestion, retrieval, source-aware answers, chunk metadata, and a FastAPI endpoint.
-
-### [telegram-business-bot-template](https://github.com/emirhuseynrmx/telegram-business-bot-template)
-
-Telegram bot template for small business workflows: lead capture, FAQs, alerts, admin commands, Pydantic validation, and CSV exports.
+Local RAG chatbot template for document ingestion, retrieval, source-aware responses, chunk metadata, and FastAPI serving.
 
 ### [calybris-core](https://github.com/emirhuseynrmx/calybris-core)
-
-Rust decision engine for deterministic, auditable decisioning. Integer-kernel design, replay verification, fixed-point budget checks, hash-chained WAL, and zero unsafe code.
-
----
-
-## How I Work
-
-I prefer small, well-scoped deliverables:
-
-- one clear input
-- one clear output contract
-- typed config
-- validation before processing
-- tests and CI
-- sample data and sample outputs
-- README that explains how to run the project
-- no unrealistic promises
-
-I am comfortable with both client-facing automation work and deeper technical systems work. The common thread is the same: make the result reproducible, inspectable, and easy to hand off.
+Rust decision engine focused on deterministic, auditable decisioning with integer-kernel design, replay verification, fixed-point checks, and zero unsafe code.
 
 ---
 
-## Tech Stack
+## Role Fit
 
-| Area | Tools |
-| --- | --- |
-| Python | pandas, Pydantic v2, Pandera, FastAPI, Typer, Rich, pytest |
-| ML / AI | scikit-learn, XGBoost, SHAP, LightGBM, RAG pipelines |
-| Data | CSV, Excel, JSONL, Parquet, Google Sheets-style workflows |
-| Automation | n8n, Telegram bots, scheduled scripts, API workflows |
-| Systems | Rust, Axum, Polars, Docker, PostgreSQL |
-| Delivery | GitHub Actions, Codecov, Dockerfiles, PDF/CSV reports |
+- Python Developer
+- Backend Developer
+- Data Engineer
+- ML Engineer
+- Automation Engineer
+- AI Tools / RAG Developer
 
----
-
-## Available For
-
-- Python automation projects
-- Web scraping and data extraction from public sources
-- CSV / Excel cleanup and reporting
-- RAG chatbot prototypes for documents
-- Churn, ML, and trading performance reports
-- Telegram bots and simple business workflow automation
-- FastAPI backends for automation tools
-
-I do not take work involving credential sharing, CAPTCHA bypass, aggressive scraping of protected platforms, guaranteed trading profit, or guaranteed ML accuracy.
+I prefer practical systems that are easy to run, test, inspect, and hand off.
 
 ---
 
