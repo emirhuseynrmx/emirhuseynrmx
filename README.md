@@ -1,159 +1,126 @@
-<div align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,35:1F6FEB,70:8957E5,100:0D1117&height=190&section=header&text=Emir%20H%C3%BCseyin%20%C4%B0nci&fontSize=46&fontColor=FFFFFF&animation=fadeIn&fontAlignY=36&desc=Decision%20Engines%20%C2%B7%20Causal%20ML%20%C2%B7%20Prescriptive%20Analytics&descAlignY=58&descAlign=50&descSize=18&descColor=A5D6FF"
-    width="100%"
-    alt="Emir Hüseyin İnci"
-  />
-</div>
+# Emir Huseyin Inci
 
-<div align="center">
-  <a href="https://git.io/typing-svg">
-    <img
-      src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2600&pause=900&color=58A6FF&center=true&vCenter=true&repeat=true&width=900&height=58&lines=8.6M+decisions%2Fsec+%E2%80%94+pure+Rust%2C+zero+unsafe;Causal+ML+%7C+Uplift+modeling+%7C+Treatment+effects;From+prediction+to+intervention+to+proof"
-      alt="Typing animation"
-    />
-  </a>
-</div>
+Python automation, data pipelines, and AI/ML reporting tools for business workflows.
 
-<div align="center">
-  <a href="https://emirhuseyin.tech">
-    <img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/>
-  </a>
-  <a href="https://emirhuseyin.tech/goveris/">
-    <img src="https://img.shields.io/badge/GOVERIS-C9A227?style=for-the-badge&logoColor=white" alt="GOVERIS"/>
-  </a>
-  <a href="https://linkedin.com/in/emirhuseyininci">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="mailto:emirhuseyininci@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-</div>
+I build practical software for clients who need clean outputs instead of vague prototypes: CSV/Excel automation, web scraping pipelines, document chatbots, churn reports, trading performance reports, Telegram bots, and FastAPI services.
 
-<br/>
+Most of my projects are structured as reusable delivery templates: validated inputs, typed configs, tests, CI, sample data, sample outputs, and clear handoff docs.
 
-I build systems that go beyond prediction: **decision engines** that choose, **causal models** that explain why, and **prescriptive pipelines** that act. My work spans integer-kernel optimization in Rust and uplift modeling in Python, always with proof, tests, and reproducibility.
-
-Currently building **[GOVERIS](https://emirhuseyin.tech/goveris/)** — AI cost governance powered by the Calybris decision engine.
+[Portfolio](https://emirhuseyin.tech) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [Email](mailto:emirhuseyininci@gmail.com)
 
 ---
 
-## Flagship: Calybris Core
+## What I Build
 
-<table>
-<tr>
-<td width="60%">
+### Data Automation
 
-### [calybris-core](https://github.com/emirhuseynrmx/calybris-core) — Open-Source Decision Engine
+- Web scraping and public data extraction
+- CSV / Excel cleaning and normalization
+- Price monitoring and alert reports
+- API to CSV / Google Sheets style workflows
+- Data quality checks and export-ready files
 
-[![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)](https://github.com/emirhuseynrmx/calybris-core)
-[![Crates.io](https://img.shields.io/crates/v/calybris-core?style=flat-square)](https://crates.io/crates/calybris-core)
-[![docs.rs](https://img.shields.io/docsrs/calybris-core?style=flat-square)](https://docs.rs/calybris-core)
-[![CI](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/emirhuseynrmx/calybris-core/graph/badge.svg?style=flat-square)](https://codecov.io/gh/emirhuseynrmx/calybris-core)
-[![License](https://img.shields.io/badge/Apache--2.0-blue?style=flat-square)](https://github.com/emirhuseynrmx/calybris-core/blob/main/LICENSE)
+### AI / ML Reports
 
-Deterministic proof-carrying decision core: integer kernel, replay verification, fixed-point budget proofs, HMAC-SHA256 hash-chained WAL. No `f64` in the hot path, `#![forbid(unsafe_code)]`.
+- Churn prediction and retention reports
+- RAG chatbots for PDFs, documents, and internal knowledge bases
+- ML model training starters with metrics and prediction exports
+- SHAP / feature importance reports where explainability matters
 
-```
-cargo add calybris-core
-cargo test --all-features   # 99 unit + integration
-cargo bench                 # 8.6M decisions/sec (kernel)
-```
+### Business Automation
 
-</td>
-<td width="40%">
+- Telegram bots for lead capture, FAQs, alerts, and customer workflows
+- n8n workflow templates
+- FastAPI backends for automation and ML workflows
+- Simple tools that remove repetitive manual work
 
-| Metric | Value |
-|:--|--:|
-| Kernel throughput | **8.6M/sec** |
-| Constraint gates | 11 |
-| Tests | 99 + proptest + Loom + Miri |
-| `unsafe` blocks | 0 |
-| WAL integrity | HMAC-SHA256 |
-| Budget engine | CAS + conservation proof |
+### Trading / Quant Reporting
 
-</td>
-</tr>
-</table>
-
-**Modules:** `kernel` (utility-maximizing prescribe + counterfactuals) · `verify` (canonical digests + replay) · `finance` (ledger digest + `FinancialCertificate`) · `budget` (per-tenant CAS + I6 invariant) · `wal` (tamper-evident audited chain).
-
-Reference paths: **LLM routing** and **pre-trade guard** — not an exchange or strategy engine.
-
-The full engine (adaptive Thompson Sampling routing, policy evolution, GBM prompt model, HTTP gateway) powers [GOVERIS](https://emirhuseyin.tech/goveris/) and is proprietary.
+- Trade log and backtest performance reports
+- Equity curve, drawdown, monthly returns, and symbol breakdowns
+- Clean PDF reports from CSV exports
+- No profit guarantees, no signal-selling, no account access
 
 ---
 
-## Other Projects
+## Selected Work
 
-### [Criteo Uplift Modeling Benchmark](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
+### [scraping-data-pipeline](https://github.com/emirhuseynrmx/scraping-data-pipeline)
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
-[![LightGBM](https://img.shields.io/badge/LightGBM-26A65B?style=flat-square)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
-[![EconML](https://img.shields.io/badge/EconML-8957E5?style=flat-square)](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark)
+Production-style Python scraping pipeline with selector configs, Pydantic models, Pandera validation, retries, CSV / JSONL / XLSX / Parquet exports, tests, and CI.
 
-**7M rows**, 6 uplift learners (S/T/X/DR-Learner, Causal Forest, response baseline). S-Learner won with **AUUC 3405**, top-decile uplift **6.23x**. Pydantic-typed, fully reproducible.
+### [csv-excel-cleaning-toolkit](https://github.com/emirhuseynrmx/csv-excel-cleaning-toolkit)
 
----
+CSV and Excel cleaning toolkit for messy business files: email normalization, validation, deduplication, type inference, outlier flags, and clean export reports.
 
-### [Aegis](https://github.com/emirhuseynrmx/aegis) — Prescriptive Churn Analytics
+### [churn-prediction-retention-report](https://github.com/emirhuseynrmx/churn-prediction-retention-report)
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/emirhuseynrmx/aegis)
-[![Tests](https://img.shields.io/badge/173_tests-94%25_coverage-success?style=flat-square)](https://github.com/emirhuseynrmx/aegis)
+Client-ready churn reporting pipeline: customer risk scores, retention recommendations, XGBoost, SHAP, lift analysis, leakage checks, PDF report, and sample outputs.
 
-Prediction + SHAP explanation + DoWhy causal analysis + DiCE counterfactual prescription + financial value decisioning + backtesting. End-to-end from churn probability to retention action.
+### [trading-performance-report-kit](https://github.com/emirhuseynrmx/trading-performance-report-kit)
 
----
+Trade CSV / backtest export reporting kit: performance metrics, equity curve, drawdown, monthly returns, symbol breakdown, PDF report, tests, and CI.
 
-### [AeraCFO](https://github.com/emirhuseynrmx/aera) — AI Finance Reporting
+### [rag-chatbot-template](https://github.com/emirhuseynrmx/rag-chatbot-template)
 
-[![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)](https://github.com/emirhuseynrmx/aera)
-[![Tests](https://img.shields.io/badge/63_tests-passing-success?style=flat-square)](https://github.com/emirhuseynrmx/aera)
+Local RAG chatbot template for documents with ingestion, retrieval, source-aware answers, chunk metadata, and a FastAPI endpoint.
 
-Axum + Polars + Gemini 2.5 Flash. Upload financial data, run planner-executor-critic agent loop, generate structured PDF report. MIT licensed.
+### [telegram-business-bot-template](https://github.com/emirhuseynrmx/telegram-business-bot-template)
 
----
+Telegram bot template for small business workflows: lead capture, FAQs, alerts, admin commands, Pydantic validation, and CSV exports.
 
-## Technical Focus
+### [calybris-core](https://github.com/emirhuseynrmx/calybris-core)
 
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=rust,python,pytorch,fastapi,docker,postgres,git&theme=dark&perline=7" alt="Tech stack"/>
-
-<br/><br/>
-
-| Domain | Tools |
-|:--|:--|
-| Decision Systems | Rust, integer kernels, CAS atomics, HMAC-SHA256, hash-chained WAL |
-| Causal ML | LightGBM, EconML, DoWhy, SHAP, DiCE, uplift/CATE estimation |
-| Infrastructure | Axum, Polars, FastAPI, Docker, PostgreSQL |
-
-</div>
+Rust decision engine for deterministic, auditable decisioning. Integer-kernel design, replay verification, fixed-point budget checks, hash-chained WAL, and zero unsafe code.
 
 ---
 
-<div align="center">
+## How I Work
 
-<img src="https://github-readme-stats.vercel.app/api?username=emirhuseynrmx&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=8957E5&text_color=C9D1D9&ring_color=8957E5" height="170" alt="GitHub stats"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=emirhuseynrmx&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=6" height="170" alt="Top languages"/>
+I prefer small, well-scoped deliverables:
 
-</div>
+- one clear input
+- one clear output contract
+- typed config
+- validation before processing
+- tests and CI
+- sample data and sample outputs
+- README that explains how to run the project
+- no unrealistic promises
+
+I am comfortable with both client-facing automation work and deeper technical systems work. The common thread is the same: make the result reproducible, inspectable, and easy to hand off.
 
 ---
 
-<div align="center">
+## Tech Stack
 
-Open to decision intelligence, causal ML, and systems engineering roles and collaborations.
+| Area | Tools |
+| --- | --- |
+| Python | pandas, Pydantic v2, Pandera, FastAPI, Typer, Rich, pytest |
+| ML / AI | scikit-learn, XGBoost, SHAP, LightGBM, RAG pipelines |
+| Data | CSV, Excel, JSONL, Parquet, Google Sheets-style workflows |
+| Automation | n8n, Telegram bots, scheduled scripts, API workflows |
+| Systems | Rust, Axum, Polars, Docker, PostgreSQL |
+| Delivery | GitHub Actions, Codecov, Dockerfiles, PDF/CSV reports |
 
-**[emirhuseyin.tech](https://emirhuseyin.tech)** · **[emirhuseyininci@gmail.com](mailto:emirhuseyininci@gmail.com)**
+---
 
-</div>
+## Available For
 
-<div align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,35:1F6FEB,70:8957E5,100:0D1117&height=120&section=footer&animation=fadeIn"
-    width="100%"
-    alt="Footer"
-  />
-</div>
+- Python automation projects
+- Web scraping and data extraction from public sources
+- CSV / Excel cleanup and reporting
+- RAG chatbot prototypes for documents
+- Churn, ML, and trading performance reports
+- Telegram bots and simple business workflow automation
+- FastAPI backends for automation tools
+
+I do not take work involving credential sharing, CAPTCHA bypass, aggressive scraping of protected platforms, guaranteed trading profit, or guaranteed ML accuracy.
+
+---
+
+## Contact
+
+- Website: [emirhuseyin.tech](https://emirhuseyin.tech)
+- LinkedIn: [linkedin.com/in/emirhuseyininci](https://linkedin.com/in/emirhuseyininci)
+- Email: [emirhuseyininci@gmail.com](mailto:emirhuseyininci@gmail.com)
