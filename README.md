@@ -56,6 +56,7 @@ cargo add calybris-core --features full
 | **Calybris Core** | Deterministic decision kernel + proof + WAL + budget | [GitHub](https://github.com/emirhuseynrmx/calybris-core) · [crates.io](https://crates.io/crates/calybris-core) |
 | **GOVERIS** | AI cost governance gateway — shadow replay, audit reports, tenant attribution | [Site](https://emirhuseyin.tech/goveris/) |
 | **Calybris Engine** | Full proprietary stack — adaptive routing, Thompson Sampling, GBM, HTTP API | [Site](https://emirhuseyin.tech/engine/) |
+| **Aegis** | Prescriptive churn analytics — calibrated ensemble, SHAP, DoWhy causal, DiCE counterfactuals, 173 tests | [GitHub](https://github.com/emirhuseynrmx/aegis) · [Site](https://emirhuseyin.tech/aegis/) |
 
 ---
 
