@@ -2,87 +2,120 @@
 
 # Emir Hüseyin İnci
 
-### Rust Systems Engineer · AI Infrastructure · Decision Systems · Applied Machine Learning
+### Rust Systems Engineer · Python Backend · AI Infrastructure · Data & Decision Systems
 
-I build deterministic, auditable software for high-stakes decisions — from proof-carrying Rust kernels to production-style Python data and ML systems.
+I build reliable software for teams that need to **control AI costs, automate data workflows, and make high-stakes decisions auditable**.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-emirhuseyin.tech-111827?style=for-the-badge&logo=googlechrome&logoColor=white)](https://emirhuseyin.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Emir_Hüseyin_İnci-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/emirhuseyininci)
-[![Email](https://img.shields.io/badge/Email-Let's_talk-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emirhuseyininci@gmail.com)
+[![Email](https://img.shields.io/badge/Email-Discuss_a_project-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emirhuseyininci@gmail.com?subject=Project%20inquiry)
 
 </div>
 
-## What I build
+## Problems I help solve
 
-- **Rust systems:** deterministic decision kernels, replayable audit trails, cryptographic proofs, tamper-evident WALs, concurrency-safe budget engines, and low-latency APIs.
-- **AI infrastructure:** model/provider routing, guardrails, cost governance, retrieval systems, observability, and policy enforcement.
-- **Applied ML:** churn prediction, uplift modeling, counterfactual explanations, calibration, SHAP, and decision-focused analytics.
-- **Data products:** validated pipelines, data-quality APIs, reproducible reports, scraping workflows, and operational dashboards.
+- **AI cost and policy control:** model routing, budget enforcement, fallback rules, guardrails, usage attribution, and audit evidence.
+- **High-integrity backend systems:** deterministic decision services, replayable workflows, tamper-evident logs, concurrency-safe accounting, and low-latency Rust APIs.
+- **Data engineering and automation:** scraping pipelines, CSV/Excel cleanup, validation contracts, scheduled jobs, API integrations, and client-ready reports.
+- **Decision-focused machine learning:** calibrated risk scores, uplift modeling, explainability, counterfactuals, and ranked operational actions.
 
-## Flagship project — Calybris Core
+## Engagements
+
+I am available for focused freelance and contract work involving:
+
+| Engagement | Typical delivery |
+| --- | --- |
+| **Rust backend and systems engineering** | Performance-sensitive APIs, concurrency-safe services, deterministic kernels, verification tooling, and production hardening |
+| **AI infrastructure** | Model gateways, RAG and retrieval services, provider routing, cost governance, evaluation, observability, and policy enforcement |
+| **Python data products** | FastAPI services, validated ETL pipelines, web scraping, CSV/Excel transformation, scheduled automation, and reporting |
+| **Applied ML systems** | Churn, lead scoring, pricing, uplift, forecasting, calibration, SHAP, and decision queues |
+| **Technical audit and rescue** | Architecture review, correctness testing, performance diagnosis, CI repair, security boundaries, and maintainability upgrades |
+
+Every engagement is scoped around a measurable outcome, explicit failure modes, tested deliverables, and a maintainable handoff.
+
+## Flagship — Calybris Core
 
 [![crates.io](https://img.shields.io/crates/v/calybris-core?label=calybris-core&logo=rust)](https://crates.io/crates/calybris-core)
 [![docs.rs](https://img.shields.io/docsrs/calybris-core?logo=docs.rs)](https://docs.rs/calybris-core)
 [![CI](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml)
 [![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/emirhuseynrmx/calybris-core)
 
-[**Calybris Core**](https://github.com/emirhuseynrmx/calybris-core) is a deterministic, proof-carrying decision kernel for routing and guardrails. Given a frozen catalog, policy snapshot, and typed request, it returns one action plus an audit bundle that can be replayed to the same answer.
+[**Calybris Core**](https://github.com/emirhuseynrmx/calybris-core) is a deterministic, proof-carrying decision kernel for routing, guardrails, and budget-sensitive automation.
 
 ```text
 catalog + policy + request  →  decision + verifiable audit bundle
 ```
+
+It is designed for systems where a team must be able to answer:
+
+- Why was this model, provider, offer, or action selected?
+- Which policy and budget state were used?
+- Can the decision be replayed and independently verified?
+- Can concurrent requests overspend or violate exposure limits?
+
+Engineering evidence:
 
 - Integer-only Rust hot path at approximately **115 ns per decision**
 - Byte-exact proof contract, golden vectors, replay verification, and `calybris-verify` auditor CLI
 - SHA-256 digests, hash-chained WAL with optional HMAC, and Ed25519 policy provenance
 - CAS budget accounting with conservation invariants verified using Loom and Miri
 - No hosted dependency and no `unsafe` in project code
-- Stable Rust crate plus experimental PyO3/Pydantic Python bindings
 
 ```bash
 cargo add calybris-core
 ```
 
-## Selected projects
+## Selected work
 
-| Project | Engineering focus | Stack |
+| Project | Business problem | What it demonstrates |
 | --- | --- | --- |
-| [**Calybris Core**](https://github.com/emirhuseynrmx/calybris-core) | Proof-carrying decision engine, deterministic replay, cryptographic audit, budget safety | Rust, Tokio, SHA-256, HMAC, Ed25519, Loom, Miri |
-| [**Aegis**](https://github.com/emirhuseynrmx/aegis) | Prescriptive churn analytics with calibrated risk, uplift evidence, SHAP, counterfactuals, and an operations dashboard | Python, Litestar, Polars, XGBoost, SHAP, Next.js, DuckDB, Postgres |
-| [**Churn Prediction Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | Reproducible churn scoring pipeline with calibration, confidence intervals, model cards, and a ranked action queue | Python, XGBoost, Pandera, Pydantic, SHAP, Typst |
-| [**CRM Lead List Cleaning API**](https://github.com/emirhuseynrmx/data-quality-cleaning-api) | Idempotent API for profiling, validating, deduplicating, and safely exporting CRM data | Python, FastAPI, Pandera, Docker, OpenAPI |
-| [**Local RAG Chatbot**](https://github.com/emirhuseynrmx/rag-chatbot) | Source-aware local document retrieval with visible evidence and no required external API | Python, FastAPI, TF-IDF, PDF ingestion |
-| [**Price Monitor Pipeline**](https://github.com/emirhuseynrmx/price-monitor-pipeline) | Repeatable public price checks, validated snapshots, threshold alerts, and run manifests | Python, Pandera, scraping, CSV, Typst |
+| [**ProofFrame**](https://github.com/emirhuseynrmx/proofframe) | Data pipelines need fast validation and durable evidence of exactly what was checked | Arrow-native Rust/Python contracts, canonical fingerprints, keyed diffs, PII and leakage scans, signed proof receipts |
+| [**Aegis**](https://github.com/emirhuseynrmx/aegis) | Churn scores are not useful unless teams know whom to contact and which action may help | Calibrated risk, uplift evidence, SHAP, counterfactuals, expected-value decisions, and an operations dashboard |
+| [**Churn Prediction & Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | Analysts need reproducible scoring and a stakeholder-ready action report | Validated ML pipeline, calibration, confidence intervals, model cards, ranked retention queue, and PDF delivery |
+| [**CRM Lead List Cleaning API**](https://github.com/emirhuseynrmx/data-quality-cleaning-api) | Messy CRM imports create duplicates, invalid contacts, and unreliable automations | FastAPI cleanup service, email and phone normalization, deduplication, profiling, safe CSV export, Docker, and OpenAPI |
+| [**Scrape Quality Pipeline**](https://github.com/emirhuseynrmx/scraping-data-pipeline) | Scraped data must remain reliable when pages, selectors, or output schemas change | Async collection, polite rate limits, retries, typed records, Pandera validation, manifests, tests, and CSV/JSONL/Excel/Parquet export |
+| [**Price Monitor Pipeline**](https://github.com/emirhuseynrmx/price-monitor-pipeline) | Teams need repeatable public price checks instead of manual monitoring | Config-driven extraction, validated snapshots, threshold alerts, run manifests, and client-ready reports |
 
-## Engineering principles
+## Delivery standard
 
 ```text
-Deterministic when correctness matters.
-Evidence-first when models make claims.
-Typed and validated at every boundary.
-Observable, replayable, and honest about limits.
+Clear scope → typed boundaries → tests and CI → observable execution
+            → reproducible output → documentation and handoff
 ```
+
+- Production-minded code with explicit assumptions and failure behavior
+- Tests for correctness-critical paths and fixtures for external integrations
+- CI, linting, dependency boundaries, and reproducible setup
+- Honest evaluation: no inflated accuracy, ROI, performance, or AI claims
+- Documentation aimed at the next engineer or operator, not only the original author
 
 ## Core stack
 
-**Languages:** Rust, Python, TypeScript, SQL  
-**Backend & data:** Tokio, FastAPI, Litestar, Pydantic, Polars, Pandas, DuckDB, PostgreSQL  
-**ML & decisioning:** XGBoost, LightGBM, CatBoost, SHAP, uplift modeling, contextual bandits, RAG  
-**Frontend & delivery:** Next.js, React, Docker, Linux, GitHub Actions  
+**Languages:** Rust, Python, TypeScript, SQL
+
+**Backend & data:** Tokio, Axum, FastAPI, Litestar, Pydantic, Polars, Pandas, Arrow, DuckDB, PostgreSQL
+
+**AI & ML:** model routing, RAG, XGBoost, LightGBM, CatBoost, SHAP, uplift modeling, contextual bandits
+
+**Delivery:** Docker, Linux, GitHub Actions, OpenAPI, Typst, Next.js, React
+
 **Verification:** property-based testing, Loom, Miri, replay tests, cryptographic digests, audit trails
 
-## Current focus
+## Start a conversation
 
-- Shipping **Calybris Core 0.5.0** and its independent verification tooling
-- Building AI cost-governance and model-routing systems on top of deterministic policy kernels
-- Turning predictive models into auditable operational decisions instead of isolated scores
+If you are dealing with an unreliable data workflow, expensive AI pipeline, difficult Rust backend, or ML system that produces scores but not decisions, send me:
+
+1. the business problem,
+2. the current stack or data source,
+3. the expected deliverable,
+4. the target timeline.
+
+I can help define a focused first milestone before expanding the scope.
 
 <div align="center">
 
-### Let’s build systems that can explain — and prove — what they did.
+### Build systems that can explain — and prove — what they did.
 
-Open to **Rust systems**, **AI infrastructure**, **decision-engine**, **applied ML**, and **data-product** work.
-
-[Portfolio](https://emirhuseyin.tech) · [Calybris on crates.io](https://crates.io/crates/calybris-core) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [Email](mailto:emirhuseyininci@gmail.com)
+[Portfolio](https://emirhuseyin.tech) · [Email](mailto:emirhuseyininci@gmail.com?subject=Project%20inquiry) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [Calybris on crates.io](https://crates.io/crates/calybris-core) · [ProofFrame on PyPI](https://pypi.org/project/proofframe/)
 
 </div>
