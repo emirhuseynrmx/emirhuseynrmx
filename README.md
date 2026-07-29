@@ -1,5 +1,12 @@
 <div align="center">
 
+<a href="https://emirhuseyin.tech" aria-label="Emir Hüseyin İnci portfolio">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-light-trim.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png">
+    <img src="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png" alt="Emir Hüseyin İnci" width="520">
+  </picture>
+</a>
 # Emir Hüseyin İnci
 
 ### Rust Systems Engineer · Python Backend · AI Infrastructure · Data & Decision Systems
@@ -114,6 +121,13 @@ I can help define a focused first milestone before expanding the scope.
 
 <div align="center">
 
+<a href="https://emirhuseyin.tech" aria-label="Emir Hüseyin İnci portfolio">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-light-trim.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png">
+    <img src="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png" alt="Emir Hüseyin İnci" width="520">
+  </picture>
+</a>
 ### Build systems that can explain — and prove — what they did.
 
 [Portfolio](https://emirhuseyin.tech) · [Email](mailto:emirhuseyininci@gmail.com?subject=Project%20inquiry) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [Calybris on crates.io](https://crates.io/crates/calybris-core) · [ProofFrame on PyPI](https://pypi.org/project/proofframe/)
