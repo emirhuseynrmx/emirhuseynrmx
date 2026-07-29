@@ -7,6 +7,7 @@
     <img src="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png" alt="Emir Hüseyin İnci" width="520">
   </picture>
 </a>
+
 # Emir Hüseyin İnci
 
 ### Rust Systems Engineer · Python Backend · AI Infrastructure · Data & Decision Systems
