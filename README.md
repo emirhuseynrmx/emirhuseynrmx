@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://emirhuseyin.tech" aria-label="Emir Hüseyin İnci portfolio">
+<a href="https://emirhuseyin.tech" aria-label="Emir Hüseyin İnci Portfolio">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-light-trim.png">
     <source media="(prefers-color-scheme: light)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png">
@@ -10,127 +10,125 @@
 
 # Emir Hüseyin İnci
 
-### Rust Systems Engineer · Python Backend · AI Infrastructure · Data & Decision Systems
+### Rust Systems Engineer · Python Backend · Data Infrastructure · Decision Systems
 
-I build reliable software for teams that need to **control AI costs, automate data workflows, and make high-stakes decisions auditable**.
+**Building high-throughput backend services, deterministic execution kernels, and zero-copy data pipelines.**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-emirhuseyin.tech-111827?style=for-the-badge&logo=googlechrome&logoColor=white)](https://emirhuseyin.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Emir_Hüseyin_İnci-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/emirhuseyininci)
-[![Email](https://img.shields.io/badge/Email-Discuss_a_project-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emirhuseyininci@gmail.com?subject=Project%20inquiry)
+[![crates.io](https://img.shields.io/crates/v/calybris-core?style=for-the-badge&logo=rust&logoColor=white&label=crates.io&color=orange)](https://crates.io/crates/calybris-core)
+[![PyPI](https://img.shields.io/pypi/v/proofframe?style=for-the-badge&logo=pypi&logoColor=white&label=PyPI&color=blue)](https://pypi.org/project/proofframe/)
+[![Email](https://img.shields.io/badge/Email-Get_in_touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emirhuseyininci@gmail.com?subject=Project%20Inquiry%20/%20Engineering%20Engagement)
 
 </div>
 
-## Problems I help solve
+---
 
-- **AI cost and policy control:** model routing, budget enforcement, fallback rules, guardrails, usage attribution, and audit evidence.
-- **High-integrity backend systems:** deterministic decision services, replayable workflows, tamper-evident logs, concurrency-safe accounting, and low-latency Rust APIs.
-- **Data engineering and automation:** scraping pipelines, CSV/Excel cleanup, validation contracts, scheduled jobs, API integrations, and client-ready reports.
-- **Decision-focused machine learning:** calibrated risk scores, uplift modeling, explainability, counterfactuals, and ranked operational actions.
+## ⚡ Engineering Highlights & Verifiable Metrics
 
-## Engagements
+- **Sub-microsecond Decision Kernel:** Built integer-only deterministic routing kernels in Rust executing at **~115 ns per decision (8.6M decisions/sec)** with zero heap allocation.
+- **Zero-Copy Arrow Pipelines:** Engineered data validation and contract enforcement running directly on **Apache Arrow C Streams (`Utf8View`/`BinaryView`)** with bounded memory.
+- **Out-of-Core Spill Engine:** Designed external K-Way merge-sort spill engines enforcing strict RAM budgets (e.g. **64 MB**) over multi-million row datasets without OOM crashes.
+- **Cryptographic Audit Trails:** Implemented **BLAKE3 canonical dataset fingerprinting** and **Ed25519 digital evidence receipts** for verifiable compliance (SOC 2, ISO 42001, EU AI Act).
+- **Formal Correctness & Concurrency Safety:** Enforced `#![forbid(unsafe_code)]`, multi-platform CI matrices, and validated concurrency boundaries using **Loom, Miri, and Property-Based Testing (proptest)**.
 
-I am available for focused freelance and contract work involving:
+---
 
-| Engagement | Typical delivery |
-| --- | --- |
-| **Rust backend and systems engineering** | Performance-sensitive APIs, concurrency-safe services, deterministic kernels, verification tooling, and production hardening |
-| **AI infrastructure** | Model gateways, RAG and retrieval services, provider routing, cost governance, evaluation, observability, and policy enforcement |
-| **Python data products** | FastAPI services, validated ETL pipelines, web scraping, CSV/Excel transformation, scheduled automation, and reporting |
-| **Applied ML systems** | Churn, lead scoring, pricing, uplift, forecasting, calibration, SHAP, and decision queues |
-| **Technical audit and rescue** | Architecture review, correctness testing, performance diagnosis, CI repair, security boundaries, and maintainability upgrades |
+## 🏆 Flagship Open-Source Projects
 
-Every engagement is scoped around a measurable outcome, explicit failure modes, tested deliverables, and a maintainable handoff.
-
-## Flagship — Calybris Core
-
-[![crates.io](https://img.shields.io/crates/v/calybris-core?label=calybris-core&logo=rust)](https://crates.io/crates/calybris-core)
+### 🦀 [Calybris Core](https://github.com/emirhuseynrmx/calybris-core) — Deterministic, Proof-Carrying Decision Kernel
+[![crates.io](https://img.shields.io/crates/v/calybris-core?logo=rust)](https://crates.io/crates/calybris-core)
 [![docs.rs](https://img.shields.io/docsrs/calybris-core?logo=docs.rs)](https://docs.rs/calybris-core)
-[![CI](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml)
-[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/emirhuseynrmx/calybris-core)
+[![CI](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/calybris-core)
 
-[**Calybris Core**](https://github.com/emirhuseynrmx/calybris-core) is a deterministic, proof-carrying decision kernel for routing, guardrails, and budget-sensitive automation.
-
-```text
-catalog + policy + request  →  decision + verifiable audit bundle
-```
-
-It is designed for systems where a team must be able to answer:
-
-- Why was this model, provider, offer, or action selected?
-- Which policy and budget state were used?
-- Can the decision be replayed and independently verified?
-- Can concurrent requests overspend or violate exposure limits?
-
-Engineering evidence:
-
-- Integer-only Rust hot path at approximately **115 ns per decision**
-- Byte-exact proof contract, golden vectors, replay verification, and `calybris-verify` auditor CLI
-- SHA-256 digests, hash-chained WAL with optional HMAC, and Ed25519 policy provenance
-- CAS budget accounting with conservation invariants verified using Loom and Miri
-- No hosted dependency and no `unsafe` in project code
+A high-integrity decision primitive for LLM routing, financial guardrails, and budget-bounded automation.
+- Evaluates constraints over frozen catalogs and emits verifiable proof bundles.
+- Replay-auditable execution with byte-exact state transitions and a standalone `calybris-verify` auditor CLI.
+- Hash-chained WAL with HMAC signing and CAS budget accounting verified with Loom.
 
 ```bash
 cargo add calybris-core
 ```
 
-## Selected work
+---
 
-| Project | Business problem | What it demonstrates |
-| --- | --- | --- |
-| [**ProofFrame**](https://github.com/emirhuseynrmx/proofframe) | Data pipelines need fast validation and durable evidence of exactly what was checked | Arrow-native Rust/Python contracts, canonical fingerprints, keyed diffs, PII and leakage scans, signed proof receipts |
-| [**Aegis**](https://github.com/emirhuseynrmx/aegis) | Churn scores are not useful unless teams know whom to contact and which action may help | Calibrated risk, uplift evidence, SHAP, counterfactuals, expected-value decisions, and an operations dashboard |
-| [**Churn Prediction & Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | Analysts need reproducible scoring and a stakeholder-ready action report | Validated ML pipeline, calibration, confidence intervals, model cards, ranked retention queue, and PDF delivery |
-| [**CRM Lead List Cleaning API**](https://github.com/emirhuseynrmx/data-quality-cleaning-api) | Messy CRM imports create duplicates, invalid contacts, and unreliable automations | FastAPI cleanup service, email and phone normalization, deduplication, profiling, safe CSV export, Docker, and OpenAPI |
-| [**Scrape Quality Pipeline**](https://github.com/emirhuseynrmx/scraping-data-pipeline) | Scraped data must remain reliable when pages, selectors, or output schemas change | Async collection, polite rate limits, retries, typed records, Pandera validation, manifests, tests, and CSV/JSONL/Excel/Parquet export |
-| [**Price Monitor Pipeline**](https://github.com/emirhuseynrmx/price-monitor-pipeline) | Teams need repeatable public price checks instead of manual monitoring | Config-driven extraction, validated snapshots, threshold alerts, run manifests, and client-ready reports |
+### 🏹 [ProofFrame](https://github.com/emirhuseynrmx/proofframe) — Arrow-Native Data Contract & Evidence Engine
+[![PyPI](https://img.shields.io/pypi/v/proofframe.svg)](https://pypi.org/project/proofframe/)
+[![CI](https://github.com/emirhuseynrmx/proofframe/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/proofframe)
 
-## Delivery standard
+A high-performance "Ruff-like" data validation kernel designed for high-throughput ETL and production pipelines.
+- Compiles data contracts into typed Arrow kernels with zero-copy stream ingestion (Pandas, Polars, PyArrow).
+- Memory-bounded out-of-core spill engine prevents Kubernetes pod OOM evictions on large datasets.
+- Generates BLAKE3 dataset fingerprints and Ed25519-signed proof receipts for data lineage and compliance.
 
-```text
-Clear scope → typed boundaries → tests and CI → observable execution
-            → reproducible output → documentation and handoff
+```bash
+pip install proofframe==0.5.0
 ```
 
-- Production-minded code with explicit assumptions and failure behavior
-- Tests for correctness-critical paths and fixtures for external integrations
-- CI, linting, dependency boundaries, and reproducible setup
-- Honest evaluation: no inflated accuracy, ROI, performance, or AI claims
-- Documentation aimed at the next engineer or operator, not only the original author
+---
 
-## Core stack
+## 📂 Selected Engineering Work
 
-**Languages:** Rust, Python, TypeScript, SQL
+| Project | Tech Stack | Business & Architectural Problem | Key Delivery & Output |
+| :--- | :--- | :--- | :--- |
+| [**ProofFrame**](https://github.com/emirhuseynrmx/proofframe) | `Rust`, `Apache Arrow`, `PyO3`, `BLAKE3`, `Ed25519` | Production pipelines need sub-millisecond validation without OOM memory spikes. | Arrow-native engine, memory budgets, spill-to-disk exact state, signed receipts. |
+| [**Calybris Core**](https://github.com/emirhuseynrmx/calybris-core) | `Rust`, `PyO3`, `WAL`, `Loom`, `Miri`, `Ed25519` | High-stakes automation requires deterministic decisions and tamper-evident audit trails. | 115 ns integer kernel, replay verification, single-writer WAL, CLI auditor. |
+| [**Churn & Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | `Python`, `scikit-learn`, `SHAP`, `Pandera`, `Typst` | Raw churn probabilities fail to provide actionable operational retention strategies. | Calibrated risk scoring, XAI drivers, Pandera contracts, Typst executive PDF reports. |
+| [**Scrape Quality Pipeline**](https://github.com/emirhuseynrmx/scraping-data-pipeline) | `Python`, `selectolax`, `asyncio`, `Pydantic v2`, `Pandera` | Web data ingestion breaks silently when selectors, schemas, or network rules shift. | Config-driven scrapers, polite rate limiting, Pydantic validation, Parquet/CSV export. |
+| [**Price Monitor Pipeline**](https://github.com/emirhuseynrmx/price-monitor-pipeline) | `Python`, `Pandera`, `Typst`, `CLI` | E-commerce teams require automated competitor price monitoring and alert queues. | Watchlist config, threshold alert tables, run manifests, automated PDF summaries. |
 
-**Backend & data:** Tokio, Axum, FastAPI, Litestar, Pydantic, Polars, Pandas, Arrow, DuckDB, PostgreSQL
+---
 
-**AI & ML:** model routing, RAG, XGBoost, LightGBM, CatBoost, SHAP, uplift modeling, contextual bandits
+## 💼 Client & Contract Engagements
 
-**Delivery:** Docker, Linux, GitHub Actions, OpenAPI, Typst, Next.js, React
+I partner with engineering teams, startups, and enterprises for focused contract roles:
 
-**Verification:** property-based testing, Loom, Miri, replay tests, cryptographic digests, audit trails
+| Domain | Deliverables & Scope |
+| :--- | :--- |
+| **Rust Systems Engineering** | Performance-critical backends, Tokio/Axum services, deterministic state machines, memory profiling, and concurrency hardening. |
+| **Data Infrastructure & ETL** | Arrow-native data quality pipelines, schema contracts, out-of-core processing, async scrapers, and automated reporting. |
+| **AI Cost & Spend Governance** | Model gateways, token budget enforcement, fallback routing, policy simulation, and audit receipt architectures. |
+| **Applied ML & Decision Systems** | Churn prediction pipelines, uplift modeling, SHAP explainability, calibration curves, and ranked operational queues. |
+| **Technical Audit & Refactoring** | Concurrency verification (Loom/Miri), CI/CD pipeline repair, memory leak diagnosis, and production readiness audits. |
 
-## Start a conversation
+---
 
-If you are dealing with an unreliable data workflow, expensive AI pipeline, difficult Rust backend, or ML system that produces scores but not decisions, send me:
+## 🛠️ Technical Stack & Tooling
 
-1. the business problem,
-2. the current stack or data source,
-3. the expected deliverable,
-4. the target timeline.
+```text
+Languages     : Rust (1.85+), Python (3.10–3.13), TypeScript, SQL
+Backend       : Tokio, Axum, FastAPI, Litestar, Pydantic v2, REST, OpenAPI, gRPC
+Data & Storage: Apache Arrow, Polars, DuckDB, Parquet, PostgreSQL, SQLite, Redis
+Testing & QA  : Loom, Miri, Property-based testing (proptest), Fuzzing, pytest, Ruff
+Delivery & Ops: Linux, Docker, Helm, Kubernetes, GitHub Actions, CI/CD, Typst
+```
 
-I can help define a focused first milestone before expanding the scope.
+---
+
+## 📬 Start a Conversation
+
+If you are dealing with an unstable data pipeline, expensive AI inference costs, a memory-intensive backend, or need auditable systems engineering:
+
+1. **Business Problem & Context**
+2. **Current Tech Stack & Data Sources**
+3. **Expected Deliverable & Timeline**
+
+Send an inquiry to **[emirhuseyininci@gmail.com](mailto:emirhuseyininci@gmail.com?subject=Project%20Inquiry%20/%20Engineering%20Engagement)** or connect on **[LinkedIn](https://linkedin.com/in/emirhuseyininci)**.
 
 <div align="center">
 
-<a href="https://emirhuseyin.tech" aria-label="Emir Hüseyin İnci portfolio">
+<br/>
+
+<a href="https://emirhuseyin.tech" aria-label="Emir Hüseyin İnci Portfolio">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-light-trim.png">
     <source media="(prefers-color-scheme: light)" srcset="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png">
     <img src="https://emirhuseyin.tech/assets/brand/ehi-lockup-dark-trim.png" alt="Emir Hüseyin İnci" width="520">
   </picture>
 </a>
-### Build systems that can explain — and prove — what they did.
 
-[Portfolio](https://emirhuseyin.tech) · [Email](mailto:emirhuseyininci@gmail.com?subject=Project%20inquiry) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [Calybris on crates.io](https://crates.io/crates/calybris-core) · [ProofFrame on PyPI](https://pypi.org/project/proofframe/)
+### *Build systems that can explain — and prove — what they did.*
+
+[Portfolio](https://emirhuseyin.tech) · [Email](mailto:emirhuseyininci@gmail.com) · [LinkedIn](https://linkedin.com/in/emirhuseyininci) · [crates.io](https://crates.io/crates/calybris-core) · [PyPI](https://pypi.org/project/proofframe/)
 
 </div>
