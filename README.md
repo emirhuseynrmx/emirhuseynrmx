@@ -10,13 +10,14 @@
 
 # Emir Hüseyin İnci
 
-### Python Backend & Data Engineer · Applied ML · Rust Systems
+### Rust Systems & Data Infrastructure Engineer
+#### Deterministic Systems · Arrow-native Pipelines · High-Throughput Runtimes (Loom, Miri, PyO3)
 
 **Available for full-time and contract roles — Türkiye / remote**
 
-Python backends, data pipelines and applied ML. I also write Rust infrastructure for
-deterministic execution and Arrow-native processing. Maintainer of ProofFrame,
-Calybris Core and ReproCut.
+Low-level systems programming in Rust and high-throughput data infrastructure in Python.
+I build deterministic execution kernels, Arrow-native validation engines, and memory-bounded runtimes
+hardened with Loom, Miri, and proptest. Maintainer of ProofFrame, Calybris Core, and ReproCut.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-emirhuseyin.tech-111827?style=for-the-badge&logo=googlechrome&logoColor=white)](https://emirhuseyin.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Emir_Hüseyin_İnci-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/emirhuseyininci)
@@ -30,36 +31,15 @@ Calybris Core and ReproCut.
 
 ## What I work on
 
-Data and decision systems where the answer has to be reproducible — not just fast.
-Most of my work sits in one of three places: **validating data before it reaches a
-model**, **turning model output into a decision**, and **proving afterwards what the
-system actually did**.
+Data, runtime, and decision infrastructure where correctness and execution must be **deterministic, auditable, and memory-bounded** — not just fast.
 
-Two of these are published packages you can install today; the rest are read-only
-portfolio work.
+* **Deterministic & Decision Kernels:** Fixed-point integer arithmetic, hash-chained Write-Ahead Logs (WAL), and cryptographic proof-bundles that replay to the exact same byte-level verdict offline.
+* **Arrow-Native Data Pipelines:** In-memory record batch validation without Python object allocation overhead, out-of-core spill management, and zero-copy column evaluations.
+* **Formal Concurrency & Correctness:** Thread interleaving permutations verified with **Loom**, undefined behaviour (UB) eliminated with **Miri**, property testing via **proptest**, and strict adherence to `#![forbid(unsafe_code)]`.
 
 ---
 
-## Published packages
-
-### [ProofFrame](https://github.com/emirhuseynrmx/proofframe) — Arrow-native data quality, Rust + Python
-
-[![PyPI](https://img.shields.io/pypi/v/proofframe.svg)](https://pypi.org/project/proofframe/)
-[![CI](https://github.com/emirhuseynrmx/proofframe/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/proofframe)
-
-Contract validation for PyArrow, Pandas, Polars, CSV and Parquet that scans record
-batches without turning rows into Python objects.
-
-- Exact uniqueness, cross-column rules and keyed diffs under an explicit memory budget.
-- Out-of-core spill so a large dataset does not become an OOM kill.
-- BLAKE3 dataset fingerprints and Ed25519-signed receipts, so a run can be identified
-  and re-checked later.
-- Fails closed: an exceeded limit or an ambiguous contract is an error, never an
-  approximate answer.
-
-```bash
-pip install proofframe
-```
+## Core systems & published packages
 
 ### [Calybris Core](https://github.com/emirhuseynrmx/calybris-core) — deterministic decision kernel, Rust + Python
 
@@ -67,71 +47,12 @@ pip install proofframe
 [![docs.rs](https://img.shields.io/docsrs/calybris-core?logo=docs.rs)](https://docs.rs/calybris-core)
 [![CI](https://github.com/emirhuseynrmx/calybris-core/actions/workflows/ci.yml/badge.svg)](https://github.com/emirhuseynrmx/calybris-core)
 
-Give it a catalog, a policy and a request; get one decision plus an audit bundle that
-replays to the same answer.
+A high-throughput decision kernel. Feed it a catalog, a policy, and a request; get one decision plus an audit bundle that replays to the identical outcome.
 
-- Integer-only kernel, no floating point: **~115 ns per decision** on the documented
-  22-model synthetic workload, reproducible via `cargo bench`.
-- Hash-chained WAL with HMAC and an external head anchor that detects even a clean
-  suffix truncation.
-- Concurrent budget ledger holding `remaining + reserved + committed == initial`,
-  checked with **Loom** for interleavings and **Miri** for undefined behaviour.
-- `#![forbid(unsafe_code)]`, CI across Linux/macOS/Windows and Python 3.10–3.14.
+- **Zero floating-point arithmetic:** Integer-only kernel executing at **~115 ns per decision** on documented 22-model synthetic workloads (`cargo bench`).
+- **Cryptographic Audit Trail:** Hash-chained WAL with HMAC and external head anchors detecting even clean suffix truncations.
+- **Formally Verified Concurrency:** Concurrent budget ledger validated across thread permutations with **Loom** and memory checked with **Miri**.
+- **Polyglot & Portable:** Runs as a native Rust crate, typed Python package via **PyO3**, and zero-dependency 237 KB **WebAssembly (WASM)**.
 
 ```bash
 cargo add calybris-core
-```
-
----
-
-## Selected work
-
-| Project | Stack | Problem | What it does |
-| :--- | :--- | :--- | :--- |
-| [**Aegis**](https://github.com/emirhuseynrmx/aegis) | `Python` `XGBoost` `SHAP` `DoWhy` `DiCE` `Litestar` | A churn probability is not an action. | Calibrated risk, uplift/CATE, counterfactuals and expected-value logic behind an API and an operations dashboard. |
-| [**Criteo Uplift Benchmark**](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) | `Python` `scikit-learn` `causal ML` | Uplift papers rarely compare methods on equal footing. | S-, T-, X- and DR-Learner plus Causal Forest on the Criteo dataset, scored with AUUC/Qini against a response-model baseline. |
-| [**ReproCut**](https://github.com/emirhuseynrmx/reprocut) | `Rust` `ddmin` `SQLite` `AST` | A minimal reproduction is expensive to produce by hand. | Removes files, dependencies and syntax nodes while the original failure still reproduces, verifying each candidate in a fresh snapshot. |
-| [**Scrape Quality Pipeline**](https://github.com/emirhuseynrmx/scraping-data-pipeline) | `Python` `asyncio` `Pydantic v2` `Pandera` | Scrapers fail silently when a selector or schema shifts. | Config-driven async scraping with typed records, schema validation and Parquet/CSV output. |
-| [**Churn & Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | `Python` `scikit-learn` `SHAP` `Typst` | Stakeholders need a document, not a notebook. | Calibrated scoring and SHAP drivers rendered into a reviewed PDF report. |
-
----
-
-## Open to
-
-| Area | What I bring |
-| :--- | :--- |
-| **Python backend** | FastAPI/Litestar services, Pydantic v2 boundaries, async I/O, PostgreSQL and Redis. |
-| **Data engineering** | Arrow, Polars, DuckDB and Parquet pipelines with schema contracts and bounded memory. |
-| **Applied ML** | Calibration, SHAP, uplift/CATE, counterfactuals, and turning scores into ranked actions. |
-| **Rust systems** | Tokio/Axum services, concurrency hardening, and verification with Loom, Miri and proptest. |
-| **Reliability work** | CI/CD repair, test and benchmark infrastructure, profiling, release engineering. |
-
----
-
-## Stack
-
-```text
-Languages     : Python (3.10–3.14), Rust (1.85+), SQL, TypeScript
-Backend       : FastAPI, Litestar, Tokio, Axum, Pydantic v2, REST, OpenAPI
-Data          : Apache Arrow, Polars, DuckDB, Parquet, PostgreSQL, SQLite, Redis
-ML            : scikit-learn, XGBoost, LightGBM, SHAP, DoWhy, DiCE, uplift/CATE
-Testing       : pytest, Pandera, proptest, Loom, Miri, fuzzing, Ruff, MyPy
-Delivery      : Linux, Docker, GitHub Actions, OpenTelemetry, Prometheus, Grafana
-```
-
----
-
-## Get in touch
-
-Open to full-time and contract roles in Python backend, data engineering and applied
-ML — remote, or on-site in Türkiye.
-
-**[emirhuseyininci@gmail.com](mailto:emirhuseyininci@gmail.com?subject=Role%20/%20Contract%20Enquiry)** · **[LinkedIn](https://linkedin.com/in/emirhuseyininci)** · **[emirhuseyin.tech](https://emirhuseyin.tech)**
-
-<div align="center">
-
-<br/>
-
-### *Build systems that can explain — and prove — what they did.*
-
-</div>
