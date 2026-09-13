@@ -93,8 +93,8 @@ cargo install --git https://github.com/emirhuseynrmx/reprocut reprocut-cli --loc
 ## Technical Stack & Tooling
 
 ```text
-Languages     : Rust, Python, SQL, Bash, WASM
-Systems & Core: Tokio, Axum, PyO3, Linux (POSIX, Process Isolation), Docker
+Languages     : Rust, Python, SQL, Bash
+Systems & Core: Tokio, Axum, PyO3, WebAssembly (WASM), Linux (POSIX), Docker
 Data Engines  : Apache Arrow, Polars, DuckDB, Parquet, SQLite (WAL)
 Verification  : Loom, Miri, Proptest, Criterion, Pytest
 Infrastructure: Linux (Debian/Ubuntu), GitHub Actions (Matrix/Hermetic CI)
