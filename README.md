@@ -68,7 +68,7 @@ pip install proofframe
 
 An evidence-backed Delta Debugging (`ddmin`) system that minimizes failing codebases to their smallest reproducible state while guaranteeing the exact failure signature is preserved.
 
-* **Multi-Tier Reduction Pipeline:** Slices directory/file trees, prunes dependency manifests (`Cargo.toml`, `pyproject.toml`, `package.json`), and performs syntax node pruning/hoisting via **Tree-sitter** across 8 languages (Rust, C, C++, Python, Go, Java, JS, TS).
+* **Multi-Tier Reduction Pipeline:** Slices directory/file trees, prunes dependency manifests (`Cargo.toml`, `pyproject.toml`, `package.json`), and performs syntax node pruning/hoisting via **Tree-sitter** across multiple languages (Rust, Python, Go, Java, JS, TS, etc.).
 * **Hermetic Isolation:** Every candidate evaluation executes in disposable snapshots with OS process-group signal containment (`command-group`) and SQLite WAL state checkpointing.
 * **Independent CI Validation:** Validated against large real-world repositories (e.g. Bevy Engine, Ipe) inside unprivileged, network-isolated (`--network none`) Linux containers.
 
@@ -93,13 +93,11 @@ cargo install --git https://github.com/emirhuseynrmx/reprocut reprocut-cli --loc
 ## Technical Stack & Tooling
 
 ```text
-Languages     : Rust (1.85+, #![forbid(unsafe_code)]), Python (3.10–3.14), SQL, 
-                TypeScript / JavaScript, C / C++ (FFI, Tree-sitter, C-ABI), POSIX Shell / Bash, WebAssembly (WASM)
-Systems       : Tokio, Axum, PyO3, SQLite (WAL + single-writer sync channels), Process Groups (SIGTERM/SIGKILL), Docker, OCI
-Data & Storage: Apache Arrow, Polars, DuckDB, Parquet, BLAKE3, SHA-256, Ed25519, JSONL
-Verification  : Loom (concurrency permutation model-checking), Miri (undefined behavior detection), 
-                proptest (property-based fuzzing), criterion (statistical microbenchmarking), pytest, Ruff, MyPy
-Infrastructure: Linux (Debian/Ubuntu), GitHub Actions (matrix & hermetic runner CI), Docker (rootless, non-networked)
+Languages     : Rust, Python, SQL, Bash, WASM
+Systems & Core: Tokio, Axum, PyO3, Linux (POSIX, Process Isolation), Docker
+Data Engines  : Apache Arrow, Polars, DuckDB, Parquet, SQLite (WAL)
+Verification  : Loom, Miri, Proptest, Criterion, Pytest
+Infrastructure: Linux (Debian/Ubuntu), GitHub Actions (Matrix/Hermetic CI)
 ```
 
 ---
