@@ -64,7 +64,7 @@ In-memory contract validation and data integrity engine for PyArrow, Pandas, Pol
 pip install proofframe
 ```
 
-### [ReproCut](https://github.com/emirhuseynrmx/reprocut) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/reprocut/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/reprocut)
+### [ReproCut](https://github.com/emirhuseynrmx/reprocut) [![Status](https://img.shields.io/badge/status-active_alpha-blue.svg?style=flat-square)](https://github.com/emirhuseynrmx/reprocut) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/reprocut/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/reprocut)
 
 An evidence-backed Delta Debugging (`ddmin`) system that minimizes failing codebases to their smallest reproducible state while guaranteeing the exact failure signature is preserved.
 
@@ -73,7 +73,8 @@ An evidence-backed Delta Debugging (`ddmin`) system that minimizes failing codeb
 * **Independent CI Validation:** Validated against large real-world repositories (e.g. Bevy Engine, Ipe) inside unprivileged, network-isolated (`--network none`) Linux containers.
 
 ```bash
-cargo install reprocut --locked
+# Build from source (public pre-release)
+cargo install --git https://github.com/emirhuseynrmx/reprocut reprocut-cli --locked
 ```
 
 ---
