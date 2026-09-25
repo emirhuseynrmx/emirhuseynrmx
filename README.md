@@ -83,7 +83,6 @@ cargo install --git https://github.com/emirhuseynrmx/reprocut reprocut-cli --loc
 
 | Project | Core Stack | Domain | Architecture Highlights |
 | :--- | :--- | :--- | :--- |
-| [**Aegis**](https://github.com/emirhuseynrmx/aegis) | `Python` `XGBoost` `SHAP` `DoWhy` `Litestar` | Decision Engines / Causal ML | Turns uncalibrated probabilities into expected-value actions; provides CATE/uplift modeling and counterfactual recourse. |
 | [**Criteo Uplift Benchmark**](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) | `Python` `scikit-learn` `causal ML` | Statistical Evaluation | Rigorous benchmark comparing S-, T-, X-, and DR-Learners alongside Causal Forests scored with AUUC and Qini curves. |
 | [**Scrape Quality Pipeline**](https://github.com/emirhuseynrmx/scraping-data-pipeline) | `Python` `asyncio` `Pydantic v2` `Pandera` | Data Engineering | High-concurrency async ingestion with typed runtime contracts, schema drift protection, and partitioned Parquet outputs. |
 | [**Churn & Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | `Python` `scikit-learn` `SHAP` `Typst` | Technical Reporting | Calibrated risk scoring and SHAP explainability drivers compiled into automated publication-grade PDFs via Typst. |
