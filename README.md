@@ -35,7 +35,9 @@ A Rust decision engine: give it options, rules and a request, and it picks an ac
 - Budgets that can't be overspent by two requests arriving at once
 - Rust crate with `#![forbid(unsafe_code)]`, Python package via PyO3, and a WebAssembly build that runs in the browser: [calybris.tech](https://calybris.tech)
 
-### [ProofFrame](https://github.com/emirhuseynrmx/proofframe) [![PyPI](https://img.shields.io/pypi/v/proofframe.svg?style=flat-square&color=3775a9&logo=pypi)](https://pypi.org/project/proofframe/) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/proofframe/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/proofframe/actions)
+<a href="https://github.com/emirhuseynrmx/proofframe"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/proofframe-logo-dark.svg"><img src="assets/proofframe-logo-light.svg" alt="ProofFrame" width="400"></picture></a>
+
+[![PyPI](https://img.shields.io/pypi/v/proofframe.svg?style=flat-square&color=3775a9&logo=pypi)](https://pypi.org/project/proofframe/) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/proofframe/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/proofframe/actions)
 
 Data validation for Pandas, Polars, PyArrow, CSV and Parquet, with a Rust core. It checks rules like "no missing names" or "ids are unique" without turning your data into Python objects, and stays inside a memory budget by spilling to disk.
 

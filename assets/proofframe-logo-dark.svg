@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="200" viewBox="0 0 720 200" role="img" aria-label="ProofFrame">
+  <rect width="720" height="200" rx="20" fill="#0d1117"/>
+  <g transform="translate(36 40)"><defs><linearGradient id="pfg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#7fe6ff"/><stop offset="0.55" stop-color="#2fb4ff"/><stop offset="1" stop-color="#5b4dff"/></linearGradient>
+<linearGradient id="pfg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#27a8ff"/><stop offset="1" stop-color="#6a4cff"/></linearGradient></defs>
+<g transform="scale(0.3)">
+<path d="M22 108 L100 28 L372 28 L298 102 L98 102 L98 374 L22 374 Z" fill="url(#pfg)"/>
+<path d="M306 102 L378 40 L378 302 L304 376 L160 376 L160 304 L306 304 Z" fill="url(#pfg2)"/>
+<rect x="160" y="160" width="82" height="82" fill="url(#pfg)"/>
+</g></g>
+  <text x="186" y="100" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#e6edf3" letter-spacing="-0.5">ProofFrame</text>
+  <rect x="187" y="116" width="44" height="4" rx="2" fill="#2fb4ff"/>
+  <text x="187" y="146" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#8b949e">Data validation for Pandas, Polars and Parquet, Rust core</text>
+</svg>
