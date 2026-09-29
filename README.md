@@ -51,7 +51,7 @@ pip install proofframe
 
 <a href="https://github.com/emirhuseynrmx/fuzzy-dedupe-rs"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/fuzzy-dedupe-rs/main/assets/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/fuzzy-dedupe-rs/main/assets/logo-light.svg" alt="fuzzy-dedupe" width="400"></picture></a>
 
-Exact near-duplicate detection and record linkage for names: Rust core, Python API, CLI. A partition filter from the similarity-join literature (PASS-JOIN) plus bit-parallel edit distance, returning exactly the pairs an exhaustive comparison would. On 100,000 real UK company names: **35.6x faster than RapidFuzz, same 21,513 pairs.** Apache-2.0.
+Exact near-duplicate detection and record linkage for names: Rust core, Python API, CLI. A partition filter from the similarity-join literature (PASS-JOIN) plus bit-parallel edit distance, returning exactly the pairs an exhaustive comparison would. On 100,000 real UK company names: **136x faster than RapidFuzz, same 21,513 pairs**; a persistent index answers single lookups against 800,000 names in 0.05 ms. Apache-2.0.
 
 ---
 
