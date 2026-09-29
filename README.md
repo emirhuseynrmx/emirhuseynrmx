@@ -8,13 +8,10 @@
   </picture>
 </a>
 
-# Emir Hüseyin İnci
+### Rust & Python engineer
 
-### Rust Systems & Data Infrastructure Engineer
-#### Deterministic Systems · Arrow-Native Pipelines · High-Throughput Runtimes (Loom, Miri, PyO3)
-
-I engineer deterministic execution kernels, Arrow-native data infrastructure, and low-latency runtimes
-where correctness is formally verified rather than assumed. Maintainer of Calybris Core, ProofFrame, and ReproCut.
+I make slow Python fast with Rust, build data pipelines that don't fall over on messy input,
+and ship the result as packages people can `pip install` or `cargo add`.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-emirhuseyin.tech-111827?style=for-the-badge&logo=googlechrome&logoColor=white)](https://emirhuseyin.tech)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Emir_Hüseyin_İnci-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/emirhuseyininci)
@@ -26,95 +23,72 @@ where correctness is formally verified rather than assumed. Maintainer of Calybr
 
 ---
 
-## Engineering Philosophy
+## Published packages
 
-Most software is written for the happy path. I build for the edge cases, the adversarial inputs, and the post-mortems six months later.
+### [Calybris Core](https://github.com/emirhuseynrmx/calybris-core) [![crates.io](https://img.shields.io/crates/v/calybris-core.svg?style=flat-square&color=e05d44&logo=rust)](https://crates.io/crates/calybris-core) [![docs.rs](https://img.shields.io/docsrs/calybris-core.svg?style=flat-square&logo=docs.rs)](https://docs.rs/calybris-core) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/calybris-core/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/calybris-core/actions)
 
-* **Fail-Closed by Construction:** A breached limit, an unexpected type, or an unhandled signal must immediately halt execution — never silently approximate or degrade into undefined behavior.
-* **Deterministic & Replayable:** Eliminating nondeterminism at the kernel level: integer-only fixed-point arithmetic, canonical SHA-256 byte digests, and append-only Write-Ahead Logs (WAL) so any historical state can be replayed and independently audited.
-* **Hardware-Conscious Runtimes:** Mindful of memory layouts, cache lines, zero-copy record batch streaming, and explicit allocation boundaries rather than relying on uncontrolled GC or global allocators.
-* **Formally Hardened Concurrency:** Concurrency is never trusted until thread interleavings are proven with **Loom**, memory safety is validated with **Miri**, and state machines survive property-based fuzzing with **proptest**.
+A Rust decision engine: give it options, rules and a request, and it picks an action the same way every time, with a record you can replay later.
 
----
+- Integer-only kernel, about 115 ns per decision in CI benchmarks (CodSpeed, Linux x86_64)
+- Budgets that can't be overspent by two requests arriving at once
+- Rust crate with `#![forbid(unsafe_code)]`, Python package via PyO3, and a WebAssembly build that runs in the browser: [calybris.tech](https://calybris.tech)
 
-## Flagship Systems
+### [ProofFrame](https://github.com/emirhuseynrmx/proofframe) [![PyPI](https://img.shields.io/pypi/v/proofframe.svg?style=flat-square&color=3775a9&logo=pypi)](https://pypi.org/project/proofframe/) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/proofframe/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/proofframe/actions)
 
-### [Calybris Core](https://github.com/emirhuseynrmx/calybris-core) [![crates.io](https://img.shields.io/crates/v/calybris-core.svg?style=flat-square&color=e05d44&logo=rust)](https://crates.io/crates/calybris-core) [![docs.rs](https://img.shields.io/docsrs/calybris-core.svg?style=flat-square&logo=docs.rs)](https://docs.rs/calybris-core) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/calybris-core/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/calybris-core)
-
-A high-frequency, deterministic decision primitive designed for high-stakes routing, order admission, and policy guardrails. Given a catalog, a policy, and a request; it computes an exact action and seals it with a tamper-evident audit bundle.
-
-* **Zero floating-point arithmetic:** Fixed-point integer kernel executing at **~115 ns per decision** on documented 22-model synthetic workloads (`cargo bench`).
-* **Cryptographic Audit Trail:** Hash-chained WAL with HMAC and external head anchors detecting even clean suffix truncations.
-* **Formally Verified Ledger:** Concurrent budget accounting (`remaining + reserved + committed == initial`) exhaustively checked with **Loom** for race conditions and **Miri** for UB.
-* **Portability:** Ships as an idiomatic Rust crate (`#![forbid(unsafe_code)]`), typed Python package via **PyO3**, and zero-dependency 237 KB **WebAssembly (WASM)**.
-
-```bash
-cargo add calybris-core
-```
-
-### [ProofFrame](https://github.com/emirhuseynrmx/proofframe) [![PyPI](https://img.shields.io/pypi/v/proofframe.svg?style=flat-square&color=3775a9&logo=pypi)](https://pypi.org/project/proofframe/) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/proofframe/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/proofframe)
-
-In-memory contract validation and data integrity engine for PyArrow, Pandas, Polars, and Parquet that evaluates record batches directly in memory without turning rows into Python heap objects.
-
-* **Out-of-Core Memory Boundaries:** Enforces explicit memory budgets with automatic disk spilling to eliminate OOM kills on massive datasets.
-* **Cryptographic Lineage:** Generates BLAKE3 dataset fingerprints and Ed25519-signed verification receipts for auditable data contracts.
-* **Zero-Copy Scans:** Evaluates exact uniqueness, cross-column assertions, and keyed diffs under strict SIMD-friendly column alignments.
+Data validation for Pandas, Polars, PyArrow, CSV and Parquet, with a Rust core. It checks rules like "no missing names" or "ids are unique" without turning your data into Python objects, and stays inside a memory budget by spilling to disk.
 
 ```bash
 pip install proofframe
 ```
 
-### [ReproCut](https://github.com/emirhuseynrmx/reprocut) [![Status](https://img.shields.io/badge/status-active_alpha-blue.svg?style=flat-square)](https://github.com/emirhuseynrmx/reprocut) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/reprocut/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/reprocut)
+---
 
-An evidence-backed Delta Debugging (`ddmin`) system that minimizes failing codebases to their smallest reproducible state while guaranteeing the exact failure signature is preserved.
+## Python → Rust
 
-* **Multi-Tier Reduction Pipeline:** Slices directory/file trees, prunes dependency manifests (`Cargo.toml`, `pyproject.toml`, `package.json`), and performs syntax node pruning/hoisting via **Tree-sitter** across multiple languages (Rust, Python, Go, Java, JS, TS, etc.).
-* **Hermetic Isolation:** Every candidate evaluation executes in disposable snapshots with OS process-group signal containment (`command-group`) and SQLite WAL state checkpointing.
-* **Independent CI Validation:** Validated against large real-world repositories (e.g. Bevy Engine, Ipe) inside unprivileged, network-isolated (`--network none`) Linux containers.
+<a href="https://github.com/emirhuseynrmx/fuzzy-dedupe-rs"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/fuzzy-dedupe-rs/main/assets/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/fuzzy-dedupe-rs/main/assets/logo-light.svg" alt="fuzzy-dedupe" width="400"></picture></a>
 
-```bash
-# Build from source (public pre-release)
-cargo install --git https://github.com/emirhuseynrmx/reprocut reprocut-cli --locked
-```
+The same function in pure Python and in Rust, called the same way, returning identical results: **113x faster on one core, 560x on twelve**, measured on 3,000 names. The kind of job I do for clients, in one small repo.
 
 ---
 
-## Selected Work
+## Data & automation
 
-| Project | Core Stack | Domain | Architecture Highlights |
-| :--- | :--- | :--- | :--- |
-| [**Criteo Uplift Benchmark**](https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark) | `Python` `scikit-learn` `causal ML` | Statistical Evaluation | Rigorous benchmark comparing S-, T-, X-, and DR-Learners alongside Causal Forests scored with AUUC and Qini curves. |
-| [**Scrape Quality Pipeline**](https://github.com/emirhuseynrmx/scraping-data-pipeline) | `Python` `asyncio` `Pydantic v2` `Pandera` | Data Engineering | High-concurrency async ingestion with typed runtime contracts, schema drift protection, and partitioned Parquet outputs. |
-| [**Churn & Retention Report**](https://github.com/emirhuseynrmx/churn-prediction-retention-report) | `Python` `scikit-learn` `SHAP` `Typst` | Technical Reporting | Calibrated risk scoring and SHAP explainability drivers compiled into automated publication-grade PDFs via Typst. |
+<table>
+<tr><td><a href="https://github.com/emirhuseynrmx/trading-performance-report-kit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/trading-performance-report-kit/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/trading-performance-report-kit/main/docs/logo-light.svg" alt="Trading Performance Report Kit" width="400"></picture></a></td><td><a href="https://github.com/emirhuseynrmx/csv-excel-cleaning-toolkit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/csv-excel-cleaning-toolkit/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/csv-excel-cleaning-toolkit/main/docs/logo-light.svg" alt="CSV & Excel Cleaning Toolkit" width="400"></picture></a></td></tr>
+<tr><td><a href="https://github.com/emirhuseynrmx/scraping-data-pipeline"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/scraping-data-pipeline/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/scraping-data-pipeline/main/docs/logo-light.svg" alt="Scrape Quality Pipeline" width="400"></picture></a></td><td><a href="https://github.com/emirhuseynrmx/price-monitor-pipeline"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/price-monitor-pipeline/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/price-monitor-pipeline/main/docs/logo-light.svg" alt="Price Monitor Pipeline" width="400"></picture></a></td></tr>
+</table>
+
+## AI & machine learning
+
+<table>
+<tr><td><a href="https://github.com/emirhuseynrmx/rag-chatbot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/rag-chatbot/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/rag-chatbot/main/docs/logo-light.svg" alt="RAG Chatbot Template" width="400"></picture></a></td><td><a href="https://github.com/emirhuseynrmx/churn-prediction-retention-report"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/churn-prediction-retention-report/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/churn-prediction-retention-report/main/docs/logo-light.svg" alt="Churn Prediction Retention Report" width="400"></picture></a></td></tr>
+<tr><td><a href="https://github.com/emirhuseynrmx/criteo-uplift-modeling-benchmark"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/criteo-uplift-modeling-benchmark/main/assets/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/criteo-uplift-modeling-benchmark/main/assets/logo-light.svg" alt="Criteo Uplift Modeling Benchmark" width="400"></picture></a></td><td><a href="https://github.com/emirhuseynrmx/forecastedge"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/forecastedge/main/assets/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/forecastedge/main/assets/logo-light.svg" alt="ForecastEdge" width="400"></picture></a></td></tr>
+</table>
+
+## Bots & workflows
+
+<table>
+<tr><td><a href="https://github.com/emirhuseynrmx/telegram-business-bot"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/telegram-business-bot/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/telegram-business-bot/main/docs/logo-light.svg" alt="Telegram Business Bot Template" width="400"></picture></a></td><td><a href="https://github.com/emirhuseynrmx/n8n-business-automation-workflows"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/n8n-business-automation-workflows/main/docs/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/n8n-business-automation-workflows/main/docs/logo-light.svg" alt="n8n Business Automation Workflows" width="400"></picture></a></td></tr>
+</table>
 
 ---
 
-## Technical Stack & Tooling
+## Stack
 
 ```text
-Languages     : Rust, Python, SQL, Bash
-Systems & Core: Tokio, Axum, PyO3, WebAssembly (WASM), Linux (POSIX), Docker
-Data Engines  : Apache Arrow, Polars, DuckDB, Parquet, SQLite (WAL)
-Verification  : Loom, Miri, Proptest, Criterion, Pytest
-Infrastructure: Linux (Debian/Ubuntu), GitHub Actions (Matrix/Hermetic CI)
+Languages   : Rust, Python, SQL
+Rust        : Tokio, Axum, PyO3, maturin, rayon, WebAssembly
+Data        : Polars, Pandas, Apache Arrow, DuckDB, Parquet
+ML          : scikit-learn, LightGBM, XGBoost, SHAP, causal ML (uplift)
+Testing     : pytest, proptest, fuzzing, Loom, Miri, GitHub Actions on Linux/macOS/Windows
 ```
 
----
+## Open to
 
-## Open To
+Full-time roles and contract work, remote worldwide or on-site in Türkiye:
 
-Available for full-time engineering roles and contract work — **Remote (worldwide)** or on-site in Türkiye:
-
-* **Rust Systems & Runtime Engineering:** High-throughput microservices (Tokio/Axum), deterministic execution kernels, PyO3 native bindings, and WebAssembly compilation.
-* **Data Infrastructure:** Arrow-native data engines, zero-copy record batch streaming, query validation layers, and memory-bounded out-of-core pipelines.
-* **Correctness, Verification & Safety:** Concurrency model checking (Loom), Undefined Behavior elimination (Miri), write-ahead logging (WAL), and hermetic CI/CD test gates.
+- Speeding up Python with Rust extensions (PyO3)
+- Data pipelines and cleanup: Polars, DuckDB, Arrow, scraping, reports
+- Rust backend services (Tokio, Axum)
 
 **[emirhuseyininci@gmail.com](mailto:emirhuseyininci@gmail.com?subject=Role%20/%20Contract%20Enquiry)** · **[LinkedIn](https://linkedin.com/in/emirhuseyininci)** · **[emirhuseyin.tech](https://emirhuseyin.tech)**
-
-<div align="center">
-
-<br/>
-
-### *Build systems that can explain — and prove — what they did.*
-
-</div>
