@@ -25,7 +25,9 @@ and ship the result as packages people can `pip install` or `cargo add`.
 
 ## Published packages
 
-### [Calybris Core](https://github.com/emirhuseynrmx/calybris-core) [![crates.io](https://img.shields.io/crates/v/calybris-core.svg?style=flat-square&color=e05d44&logo=rust)](https://crates.io/crates/calybris-core) [![docs.rs](https://img.shields.io/docsrs/calybris-core.svg?style=flat-square&logo=docs.rs)](https://docs.rs/calybris-core) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/calybris-core/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/calybris-core/actions)
+<a href="https://github.com/emirhuseynrmx/calybris-core"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/calybris-logo-dark.svg"><img src="assets/calybris-logo-light.svg" alt="Calybris Core" width="400"></picture></a>
+
+[![crates.io](https://img.shields.io/crates/v/calybris-core.svg?style=flat-square&color=e05d44&logo=rust)](https://crates.io/crates/calybris-core) [![docs.rs](https://img.shields.io/docsrs/calybris-core.svg?style=flat-square&logo=docs.rs)](https://docs.rs/calybris-core) [![CI](https://img.shields.io/github/actions/workflow/status/emirhuseynrmx/calybris-core/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/emirhuseynrmx/calybris-core/actions)
 
 A Rust decision engine: give it options, rules and a request, and it picks an action the same way every time, with a record you can replay later.
 
