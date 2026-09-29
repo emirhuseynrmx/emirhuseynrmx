@@ -51,7 +51,7 @@ pip install proofframe
 
 <a href="https://github.com/emirhuseynrmx/fuzzy-dedupe-rs"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/emirhuseynrmx/fuzzy-dedupe-rs/main/assets/logo-dark.svg"><img src="https://raw.githubusercontent.com/emirhuseynrmx/fuzzy-dedupe-rs/main/assets/logo-light.svg" alt="fuzzy-dedupe" width="400"></picture></a>
 
-The same function in pure Python and in Rust, called the same way, returning identical results: **113x faster on one core, 560x on twelve**, measured on 3,000 names. The kind of job I do for clients, in one small repo.
+Near-duplicate name search with a Rust core, a Python API and a CLI. It uses a partition filter from the similarity-join literature (PASS-JOIN) and bit-parallel edit distance, and returns exactly the pairs a brute-force search would. On 3,000 company names: **157 s in pure Python, 18 ms in Rust**; 100,000 names in under 6 s.
 
 ---
 
